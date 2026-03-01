@@ -154,16 +154,20 @@ void IC3IA::initialize()
   // add all the predicates from init and property to the abstraction
   // NOTE: abstract is called automatically in IC3Base initialize
   UnorderedTermSet preds;
-  get_predicates(solver_, conc_ts_.init(), preds, false, false, true);
-  size_t num_init_preds = preds.size();
-  get_predicates(solver_, bad_, preds, false, false, true);
-  size_t num_prop_preds = preds.size() - num_init_preds;
-  for (const auto & p : preds) {
-    add_predicate(p);
+  if (!options_.ic3ia_skip_init_preds_) {
+    get_predicates(solver_, conc_ts_.init(), preds, false, false, true);
+    size_t num_init_preds = preds.size();
+    get_predicates(solver_, bad_, preds, false, false, true);
+    size_t num_prop_preds = preds.size() - num_init_preds;
+    for (const auto & p : preds) {
+      add_predicate(p);
+    }
+    logger.log(1, "Number predicates found in init: {}", num_init_preds);
+    logger.log(1, "Number predicates found in prop: {}", num_prop_preds);
+    logger.log(1, "Total number of initial predicates: {}", preds.size());
+  } else {
+    logger.log(1, "Skipping automatic predicate extraction from init/prop");
   }
-  logger.log(1, "Number predicates found in init: {}", num_init_preds);
-  logger.log(1, "Number predicates found in prop: {}", num_prop_preds);
-  logger.log(1, "Total number of initial predicates: {}", preds.size());
 
   // Add LLM-generated predicates from external file
   if (!options_.ic3ia_predicate_file_.empty()) {
