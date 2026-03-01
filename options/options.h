@@ -205,7 +205,8 @@ class PonoOptions
         klive_step_size_(default_klive_step_size_),
         klive_counter_encoding_(default_klive_counter_encoding_),
         klive_check_lasso_in_cex_(default_klive_check_lasso_in_cex_),
-        klive_lockstep_bmc_(default_klive_lockstep_bmc_)
+        klive_lockstep_bmc_(default_klive_lockstep_bmc_),
+        ic3ia_skip_init_preds_(default_ic3ia_skip_init_preds_)
   {
   }
 
@@ -268,6 +269,8 @@ class PonoOptions
   bool ic3ia_track_important_vars_;  ///< prioritize predicates with marked
                                      ///< important variables
   bool ic3ia_sim_cex_;      ///< simulate abstract cex during IC3IA's refinement
+  std::string ic3ia_predicate_file_;  ///< JSON file with initial predicates for IC3IA
+  bool ic3ia_skip_init_preds_;  ///< skip automatic predicate extraction from init/prop
   bool ic3sa_func_refine_;  ///< try functional unrolling in refinement
   std::string profiling_log_filename_;
   bool pseudo_init_prop_;  ///< replace init and prop with boolean state vars
@@ -425,6 +428,7 @@ class PonoOptions
   static const bool default_ic3ia_reduce_preds_ = true;
   static const bool default_ic3ia_track_important_vars_ = true;
   static const bool default_ic3ia_sim_cex_ = true;
+  static const bool default_ic3ia_skip_init_preds_ = false;
   static const bool default_ic3sa_func_refine_ = true;
   static const std::string default_profiling_log_filename_;
   static const bool default_pseudo_init_prop_ = false;

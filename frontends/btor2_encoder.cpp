@@ -310,6 +310,15 @@ void BTOR2Encoder::parse(const std::string filename)
       terms_[bt2_line->id] = state;
       statesvec_.push_back(state);
       symbol_map_[new_symbol] = orig_symbol;
+      // Also register original BTOR2 symbol name so predicates can look up
+      // variables by their design-level names (e.g., "copy1.product")
+      if (!orig_symbol.empty() && orig_symbol != new_symbol) {
+        try {
+          ts_.name_term(orig_symbol, state);
+        } catch (PonoException &) {
+          // ignore if name conflicts
+        }
+      }
       // will be removed from this map if there's a next function for this state
       no_next_states_[num_states] = state;
       id2statenum[bt2_line->id] = num_states;

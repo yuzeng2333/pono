@@ -41,6 +41,7 @@
 #include "smt-switch/smt.h"
 #include "smt/available_solvers.h"
 #include "utils/logger.h"
+#include "utils/predicate_reader.h"
 #include "utils/term_analysis.h"
 
 using namespace smt;
@@ -163,6 +164,18 @@ void IC3IA::initialize()
   logger.log(1, "Number predicates found in init: {}", num_init_preds);
   logger.log(1, "Number predicates found in prop: {}", num_prop_preds);
   logger.log(1, "Total number of initial predicates: {}", preds.size());
+
+  // Add LLM-generated predicates from external file
+  if (!options_.ic3ia_predicate_file_.empty()) {
+    TermVec llm_preds = read_predicates(
+        options_.ic3ia_predicate_file_, conc_ts_, solver_);
+    for (const auto & p : llm_preds) {
+      add_predicate(p);
+    }
+    logger.log(1, "Added {} LLM predicates from {}",
+               llm_preds.size(), options_.ic3ia_predicate_file_);
+  }
+
   // more predicates will be added during refinement
   // these ones are just initial predicates
 

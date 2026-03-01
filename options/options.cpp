@@ -71,6 +71,7 @@ enum optionIndex
   NO_IC3IA_REDUCE_PREDS,
   NO_IC3IA_TRACK_IMPORTANT_VARS,
   NO_IC3IA_SIM_CEX,
+  IC3IA_PREDICATES,
   NO_IC3SA_FUNC_REFINE,
   MBIC3_INDGEN_MODE,
   PROFILING_LOG_FILENAME,
@@ -418,6 +419,13 @@ const option::Descriptor usage[] = {
     Arg::None,
     "  --no-ic3ia-sim-cex \tDo not simulate abstract cex during refinement, "
     "perform BMC instead." },
+  { IC3IA_PREDICATES,
+    0,
+    "",
+    "ic3ia-predicates",
+    Arg::NonEmpty,
+    "  --ic3ia-predicates <path-to-json> \tInitial predicates for IC3IA from "
+    "external JSON file." },
   { NO_IC3SA_FUNC_REFINE,
     0,
     "",
@@ -957,6 +965,7 @@ ProverResult PonoOptions::parse_and_set_options(int argc,
         case NO_IC3IA_REDUCE_PREDS: ic3ia_reduce_preds_ = false;
         case NO_IC3IA_TRACK_IMPORTANT_VARS: ic3ia_track_important_vars_ = false;
         case NO_IC3IA_SIM_CEX: ic3ia_sim_cex_ = false; break;
+        case IC3IA_PREDICATES: ic3ia_predicate_file_ = opt.arg; break;
         case NO_IC3SA_FUNC_REFINE: ic3sa_func_refine_ = false; break;
         case PROFILING_LOG_FILENAME:
 #ifndef WITH_PROFILING

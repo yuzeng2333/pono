@@ -279,6 +279,7 @@ set(
   "${PROJECT_SOURCE_DIR}/utils/syntax_analysis_common.cpp"
   "${PROJECT_SOURCE_DIR}/utils/syntax_analysis_walker.cpp"
   "${PROJECT_SOURCE_DIR}/utils/syntax_analysis.cpp"
+  "${PROJECT_SOURCE_DIR}/utils/predicate_reader.cpp"
   "${PROJECT_SOURCE_DIR}/options/options.cpp"
   "${BISON_SMVParser_OUTPUTS}"
   "${FLEX_SMVScanner_OUTPUTS}"
