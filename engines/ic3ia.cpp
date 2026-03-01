@@ -166,7 +166,13 @@ void IC3IA::initialize()
     logger.log(1, "Number predicates found in prop: {}", num_prop_preds);
     logger.log(1, "Total number of initial predicates: {}", preds.size());
   } else {
-    logger.log(1, "Skipping automatic predicate extraction from init/prop");
+    // still extract property predicates — needed for IC3 to reason about bad
+    get_predicates(solver_, bad_, preds, false, false, true);
+    for (const auto & p : preds) {
+      add_predicate(p);
+    }
+    logger.log(1, "Skipping init predicate extraction, kept {} prop predicates",
+               preds.size());
   }
 
   // Add LLM-generated predicates from external file
