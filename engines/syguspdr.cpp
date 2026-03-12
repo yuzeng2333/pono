@@ -153,7 +153,6 @@ void SygusPdr::initialize()
     throw PonoException(
         "SyGuS PDR requires not to assume property in the transition "
         "relations");
-  options_.ic3_unsatcore_gen_ = false;
 
   if (initialized_) return;
 

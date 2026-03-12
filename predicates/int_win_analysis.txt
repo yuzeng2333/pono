@@ -1,0 +1,81 @@
+======================================================================
+IC3 BLOCKING CLAUSE PREDICATE PATTERN ANALYSIS
+======================================================================
+
+Metadata: {
+  "engine": "ic3ia",
+  "num_frames": 4,
+  "all_atoms": [
+    "(= state17 #b0000000000000000)",
+    "(= state28 #b1)",
+    "(= state9 #b0000)"
+  ],
+  "atom_stats": {
+    "(= state17 #b0000000000000000)": {
+      "count": 1,
+      "pos_count": 0,
+      "neg_count": 1,
+      "min_frame": 1,
+      "max_frame": 1
+    },
+    "(= state28 #b1)": {
+      "count": 2,
+      "pos_count": 2,
+      "neg_count": 0,
+      "min_frame": 1,
+      "max_frame": 3
+    },
+    "(= state9 #b0000)": {
+      "count": 1,
+      "pos_count": 1,
+      "neg_count": 0,
+      "min_frame": 3,
+      "max_frame": 3
+    }
+  }
+}
+
+Total frames: 3
+Total clauses: 2
+Unique predicate atoms: 3
+
+--- Frame Distribution ---
+  Frame 1: 2 literal occurrences
+  Frame 2: 0 literal occurrences
+  Frame 3: 2 literal occurrences
+
+--- Polarity Analysis ---
+  Always positive: 2
+    + (= state28 #b1)  (count=2)
+    + (= state9 #b0000)  (count=1)
+  Always negated: 1
+    - (= state17 #b0000000000000000)  (count=1)
+  Mixed polarity: 0
+
+--- Clause Structure ---
+  Clause count: 2
+  Avg clause size: 2.0
+  Min clause size: 2
+  Max clause size: 2
+  Size distribution:
+    size 2: 2 clauses
+
+  Top co-occurring literal pairs:
+    (1x) (= state28 #b1)  AND  (not (= state17 #b0000000000000000))
+    (1x) (= state28 #b1)  AND  (= state9 #b0000)
+
+--- Frame Progression ---
+  Frame predicate sets are NOT monotonic
+  Frame 1 -> 2: -2 removed literals
+    - (= state28 #b1)
+    - (not (= state17 #b0000000000000000))
+  Frame 2 -> 3: +2 new literals
+    + (= state28 #b1)
+    + (= state9 #b0000)
+
+--- Predicate Type Classification ---
+  equality: 3
+
+======================================================================
+END OF ANALYSIS
+======================================================================

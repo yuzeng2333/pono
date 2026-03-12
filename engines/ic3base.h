@@ -184,6 +184,14 @@ class IC3Base : public SafetyProver
 
   size_t witness_length() const override;
 
+  /** Dump all blocking clauses from frames to a JSON file.
+   *  Works for all IC3 variants (IC3, IC3Bits, MBIC3, IC3IA, IC3SA, SyGuS-PDR).
+   *  @param filename path to the output JSON file
+   *  @param engine_name name of the engine for labeling
+   */
+  void dump_frames_to_json(const std::string & filename,
+                           const std::string & engine_name) const;
+
  protected:
   bool compute_witness() override;
 
@@ -384,7 +392,7 @@ class IC3Base : public SafetyProver
    *  @param i the frame number
    *  @param c the IC3Formula to check
    *  @param out the output collateral:
-   *         if query is UNSAT and ic3_unsatcore_gen is true it will
+   *         if query is UNSAT it will try to use unsat core to
    *           do a cheap unsat-core based generalization of c and set
    *           out to a subset (as a conjunction still)
    *           NOTE: depending on the IC3 variant and particular problem

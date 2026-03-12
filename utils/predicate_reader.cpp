@@ -128,6 +128,264 @@ static Term resolve_operand(const string & name,
   return nullptr;
 }
 
+// --- Simple SMT-LIB2 expression parser for predicate formulas ---
+
+// Forward declaration
+static Term parse_smt2_expr(const string & s,
+                            size_t & pos,
+                            const TransitionSystem & ts,
+                            const SmtSolver & solver);
+
+// Parse an SMT2 token (symbol, numeral, etc.)
+static string parse_smt2_token(const string & s, size_t & pos)
+{
+  skip_ws(s, pos);
+  string tok;
+  while (pos < s.size() && s[pos] != ' ' && s[pos] != '('
+         && s[pos] != ')' && !isspace(s[pos])) {
+    tok += s[pos++];
+  }
+  return tok;
+}
+
+// Parse an indexed operator like (_ sign_extend 32) or (_ bv0 32)
+static Term parse_smt2_indexed(const string & s,
+                               size_t & pos,
+                               const TransitionSystem & ts,
+                               const SmtSolver & solver)
+{
+  skip_ws(s, pos);
+  string op = parse_smt2_token(s, pos);
+
+  if (op == "sign_extend" || op == "zero_extend") {
+    skip_ws(s, pos);
+    string nstr = parse_smt2_token(s, pos);
+    int n = stoi(nstr);
+    skip_ws(s, pos);
+    if (s[pos] == ')') pos++;  // close the (_ ...)
+
+    // Now parse the argument
+    skip_ws(s, pos);
+    Term arg = parse_smt2_expr(s, pos, ts, solver);
+    if (!arg) return nullptr;
+
+    Sort arg_sort = arg->get_sort();
+    int orig_width = arg_sort->get_width();
+    Sort result_sort = solver->make_sort(BV, orig_width + n);
+
+    if (op == "sign_extend") {
+      return solver->make_term(Op(Sign_Extend, n), arg);
+    } else {
+      return solver->make_term(Op(Zero_Extend, n), arg);
+    }
+  } else if (op.substr(0, 2) == "bv") {
+    // (_ bvN W) — bitvector constant
+    string valstr = op.substr(2);
+    skip_ws(s, pos);
+    string wstr = parse_smt2_token(s, pos);
+    int width = stoi(wstr);
+    skip_ws(s, pos);
+    if (pos < s.size() && s[pos] == ')') pos++;  // close the (_ ...)
+
+    Sort bvsort = solver->make_sort(BV, width);
+    long val = stol(valstr);
+    return solver->make_term(val, bvsort);
+  }
+
+  return nullptr;
+}
+
+// Parse a full SMT2 expression recursively
+static Term parse_smt2_expr(const string & s,
+                            size_t & pos,
+                            const TransitionSystem & ts,
+                            const SmtSolver & solver)
+{
+  skip_ws(s, pos);
+  if (pos >= s.size()) return nullptr;
+
+  if (s[pos] == '(') {
+    pos++;  // consume '('
+    skip_ws(s, pos);
+
+    // Check for indexed operators: (_ ...)
+    if (s[pos] == '_') {
+      pos++;  // consume '_'
+      skip_ws(s, pos);
+      // Peek: is this a standalone (_ bvN W) or (_ sign_extend N)?
+      // Save position to check
+      size_t save = pos;
+      string op = parse_smt2_token(s, pos);
+
+      if (op == "sign_extend" || op == "zero_extend") {
+        skip_ws(s, pos);
+        string nstr = parse_smt2_token(s, pos);
+        int n = stoi(nstr);
+        skip_ws(s, pos);
+        if (pos < s.size() && s[pos] == ')') pos++;  // close (_ ...)
+        skip_ws(s, pos);
+        Term arg = parse_smt2_expr(s, pos, ts, solver);
+        skip_ws(s, pos);
+        if (pos < s.size() && s[pos] == ')') pos++;  // close outer
+        if (!arg) return nullptr;
+        if (op == "sign_extend") {
+          return solver->make_term(Op(Sign_Extend, n), arg);
+        } else {
+          return solver->make_term(Op(Zero_Extend, n), arg);
+        }
+      } else if (op.substr(0, 2) == "bv") {
+        // (_ bvN W)
+        string valstr = op.substr(2);
+        skip_ws(s, pos);
+        string wstr = parse_smt2_token(s, pos);
+        int width = stoi(wstr);
+        skip_ws(s, pos);
+        if (pos < s.size() && s[pos] == ')') pos++;  // close (_ ...)
+        Sort bvsort = solver->make_sort(BV, width);
+        long val = stol(valstr);
+        return solver->make_term(val, bvsort);
+      } else {
+        // Unknown indexed, restore
+        pos = save;
+        return nullptr;
+      }
+    }
+
+    // Check for indexed operator application: ((_ sign_extend 32) arg)
+    if (s[pos] == '(') {
+      size_t save_outer = pos;
+      pos++;  // consume inner '('
+      skip_ws(s, pos);
+      if (pos < s.size() && s[pos] == '_') {
+        pos++;  // consume '_'
+        skip_ws(s, pos);
+        string iop = parse_smt2_token(s, pos);
+
+        if (iop == "sign_extend" || iop == "zero_extend") {
+          skip_ws(s, pos);
+          string nstr = parse_smt2_token(s, pos);
+          int n = stoi(nstr);
+          skip_ws(s, pos);
+          if (pos < s.size() && s[pos] == ')') pos++;  // close (_ ...)
+          skip_ws(s, pos);
+          Term arg = parse_smt2_expr(s, pos, ts, solver);
+          skip_ws(s, pos);
+          if (pos < s.size() && s[pos] == ')') pos++;  // close outer (...)
+          if (!arg) return nullptr;
+          if (iop == "sign_extend") {
+            return solver->make_term(Op(Sign_Extend, n), arg);
+          } else {
+            return solver->make_term(Op(Zero_Extend, n), arg);
+          }
+        } else if (iop == "extract") {
+          skip_ws(s, pos);
+          string histr = parse_smt2_token(s, pos);
+          skip_ws(s, pos);
+          string lostr = parse_smt2_token(s, pos);
+          int hi = stoi(histr);
+          int lo = stoi(lostr);
+          skip_ws(s, pos);
+          if (pos < s.size() && s[pos] == ')') pos++;  // close (_ ...)
+          skip_ws(s, pos);
+          Term arg = parse_smt2_expr(s, pos, ts, solver);
+          skip_ws(s, pos);
+          if (pos < s.size() && s[pos] == ')') pos++;  // close outer
+          if (!arg) return nullptr;
+          return solver->make_term(Op(Extract, hi, lo), arg);
+        } else {
+          // Unknown indexed op, restore
+          pos = save_outer;
+        }
+      } else {
+        // Not an indexed op, restore
+        pos = save_outer;
+      }
+    }
+
+    // Parse operator
+    string op = parse_smt2_token(s, pos);
+
+    // Determine operation and arity
+    if (op == "=" || op == "bvadd" || op == "bvsub" || op == "bvmul"
+        || op == "bvand" || op == "bvor" || op == "bvxor" || op == "bvult"
+        || op == "bvule" || op == "bvslt" || op == "bvsle" || op == "bvudiv"
+        || op == "bvurem" || op == "bvsrem" || op == "bvshl" || op == "bvlshr"
+        || op == "bvashr" || op == "and" || op == "or" || op == "=>") {
+      skip_ws(s, pos);
+      Term arg1 = parse_smt2_expr(s, pos, ts, solver);
+      skip_ws(s, pos);
+      Term arg2 = parse_smt2_expr(s, pos, ts, solver);
+      skip_ws(s, pos);
+      if (pos < s.size() && s[pos] == ')') pos++;
+
+      if (!arg1 || !arg2) return nullptr;
+
+      PrimOp prim;
+      if (op == "=") prim = Equal;
+      else if (op == "bvadd") prim = BVAdd;
+      else if (op == "bvsub") prim = BVSub;
+      else if (op == "bvmul") prim = BVMul;
+      else if (op == "bvand") prim = BVAnd;
+      else if (op == "bvor") prim = BVOr;
+      else if (op == "bvxor") prim = BVXor;
+      else if (op == "bvult") prim = BVUlt;
+      else if (op == "bvule") prim = BVUle;
+      else if (op == "bvslt") prim = BVSlt;
+      else if (op == "bvsle") prim = BVSle;
+      else if (op == "bvudiv") prim = BVUdiv;
+      else if (op == "bvurem") prim = BVUrem;
+      else if (op == "bvsrem") prim = BVSrem;
+      else if (op == "bvshl") prim = BVShl;
+      else if (op == "bvlshr") prim = BVLshr;
+      else if (op == "bvashr") prim = BVAshr;
+      else if (op == "and") prim = And;
+      else if (op == "or") prim = Or;
+      else if (op == "=>") prim = Implies;
+      else return nullptr;
+
+      return solver->make_term(prim, arg1, arg2);
+    } else if (op == "not" || op == "bvnot" || op == "bvneg") {
+      skip_ws(s, pos);
+      Term arg = parse_smt2_expr(s, pos, ts, solver);
+      skip_ws(s, pos);
+      if (pos < s.size() && s[pos] == ')') pos++;
+      if (!arg) return nullptr;
+
+      PrimOp prim;
+      if (op == "not") prim = Not;
+      else if (op == "bvnot") prim = BVNot;
+      else prim = BVNeg;
+
+      return solver->make_term(prim, arg);
+    } else if (op == "ite") {
+      skip_ws(s, pos);
+      Term cond = parse_smt2_expr(s, pos, ts, solver);
+      skip_ws(s, pos);
+      Term then_t = parse_smt2_expr(s, pos, ts, solver);
+      skip_ws(s, pos);
+      Term else_t = parse_smt2_expr(s, pos, ts, solver);
+      skip_ws(s, pos);
+      if (pos < s.size() && s[pos] == ')') pos++;
+      if (!cond || !then_t || !else_t) return nullptr;
+      return solver->make_term(Ite, cond, then_t, else_t);
+    } else {
+      // Unknown operator
+      return nullptr;
+    }
+  } else {
+    // Atom: variable name or numeral
+    string tok = parse_smt2_token(s, pos);
+    if (tok.empty()) return nullptr;
+
+    // Try as variable
+    Term t = resolve_operand(tok, ts, solver);
+    if (t) return t;
+
+    // Unknown atom
+    return nullptr;
+  }
+}
+
 TermVec read_predicates(const string & json_path,
                         const TransitionSystem & ts,
                         const SmtSolver & solver)
@@ -195,7 +453,25 @@ TermVec read_predicates(const string & json_path,
     }
     expect_char(content, pos, '}');
 
-    // Construct the predicate term
+    // Handle smt2 predicate type: parse SMT-LIB2 formula from op1
+    if (pred_type == "smt2") {
+      if (op1_name.empty()) {
+        logger.log(0, "WARNING: smt2 predicate missing formula in op1, skipping");
+      } else {
+        size_t smt_pos = 0;
+        Term pred = parse_smt2_expr(op1_name, smt_pos, ts, solver);
+        if (pred) {
+          predicates.push_back(pred);
+          logger.log(1, "Loaded smt2 predicate: {}", pred->to_string());
+        } else {
+          logger.log(0, "WARNING: failed to parse smt2 formula '{}', skipping",
+                     op1_name);
+        }
+      }
+      goto next_pred;
+    }
+
+    // Construct the predicate term (simple binary predicate types)
     if (op1_name.empty()) {
       logger.log(0, "WARNING: predicate missing op1, skipping");
     } else {

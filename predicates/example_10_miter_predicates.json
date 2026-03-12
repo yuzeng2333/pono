@@ -1,0 +1,1570 @@
+[
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state219",
+      "op2": "state9499"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state237",
+      "op2": "state9514"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state275",
+      "op2": "state9536"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state282",
+      "op2": "state9543"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state292",
+      "op2": "state9552"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state299",
+      "op2": "state9558"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3215",
+      "op2": "state11607"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4776",
+      "op2": "state12740"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state324",
+      "op2": "state9583"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state404",
+      "op2": "state9594"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state482",
+      "op2": "state9609"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state557",
+      "op2": "state9620"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state594",
+      "op2": "state9631"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state676",
+      "op2": "state9647"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state690",
+      "op2": "state9660"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state725",
+      "op2": "state9677"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state747",
+      "op2": "state9690"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state796",
+      "op2": "state9737"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state823",
+      "op2": "state9759"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state858",
+      "op2": "state9792"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state873",
+      "op2": "state9802"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1030",
+      "op2": "state9948"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1076",
+      "op2": "state9992"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1196",
+      "op2": "state10062"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1225",
+      "op2": "state10077"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1239",
+      "op2": "state10091"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1266",
+      "op2": "state10111"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1293",
+      "op2": "state10132"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1330",
+      "op2": "state10165"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1352",
+      "op2": "state10182"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1362",
+      "op2": "state10191"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1386",
+      "op2": "state10212"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1395",
+      "op2": "state10221"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1421",
+      "op2": "state10247"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1047",
+      "op2": "state9963"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state104",
+      "op2": "state107"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1036",
+      "op2": "state9952"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1044",
+      "op2": "state9960"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1226",
+      "op2": "state10078"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1961",
+      "op2": "state10689"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1324",
+      "op2": "state10159"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1978",
+      "op2": "state10704"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2016",
+      "op2": "state10710"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2175",
+      "op2": "state10812"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2222",
+      "op2": "state10856"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2227",
+      "op2": "state10860"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2232",
+      "op2": "state10864"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state596",
+      "op2": "state9633"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2242",
+      "op2": "state10873"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2247",
+      "op2": "state10877"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2254",
+      "op2": "state10882"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state406",
+      "op2": "state9596"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2266",
+      "op2": "state10893"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2271",
+      "op2": "state10897"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2298",
+      "op2": "state10924"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2304",
+      "op2": "state10928"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2311",
+      "op2": "state10933"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2318",
+      "op2": "state10938"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2324",
+      "op2": "state10944"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state841",
+      "op2": "state9775"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1081",
+      "op2": "state9996"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state824",
+      "op2": "state9760"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state830",
+      "op2": "state9766"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state826",
+      "op2": "state9762"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2439",
+      "op2": "state11034"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2443",
+      "op2": "state11037"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state220",
+      "op2": "state9500"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state679",
+      "op2": "state9650"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2468",
+      "op2": "state11060"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state136",
+      "op2": "state147"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state5988",
+      "op2": "state13484"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state5990",
+      "op2": "state13486"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state215",
+      "op2": "state9495"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state6472",
+      "op2": "state13856"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2490",
+      "op2": "state11082"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state836",
+      "op2": "state9770"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2514",
+      "op2": "state11095"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2517",
+      "op2": "state11098"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2654",
+      "op2": "state11148"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2678",
+      "op2": "state11172"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state201",
+      "op2": "state9483"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2716",
+      "op2": "state11206"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state558",
+      "op2": "state9621"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2803",
+      "op2": "state11289"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1859",
+      "op2": "state10587"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2821",
+      "op2": "state11306"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2902",
+      "op2": "state11369"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2969",
+      "op2": "state11376"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3045",
+      "op2": "state11445"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3119",
+      "op2": "state11512"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1270",
+      "op2": "state10112"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3155",
+      "op2": "state11547"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3222",
+      "op2": "state11614"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3325",
+      "op2": "state11683"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state126",
+      "op2": "state140"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state241",
+      "op2": "state9515"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2506",
+      "op2": "state11087"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2356",
+      "op2": "state10951"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2255",
+      "op2": "state10883"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3619",
+      "op2": "state11913"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2431",
+      "op2": "state11026"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1229",
+      "op2": "state10081"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2482",
+      "op2": "state11074"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1247",
+      "op2": "state10097"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2807",
+      "op2": "state11293"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state204",
+      "op2": "state9486"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3723",
+      "op2": "state11994"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1035",
+      "op2": "state9951"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3749",
+      "op2": "state12020"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2185",
+      "op2": "state10819"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2476",
+      "op2": "state11068"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3824",
+      "op2": "state12088"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3852",
+      "op2": "state12116"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3700",
+      "op2": "state11971"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2473",
+      "op2": "state11065"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3896",
+      "op2": "state12160"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3899",
+      "op2": "state12163"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2180",
+      "op2": "state10814"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2658",
+      "op2": "state11152"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2660",
+      "op2": "state11154"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3910",
+      "op2": "state12174"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3914",
+      "op2": "state12178"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2275",
+      "op2": "state10901"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2277",
+      "op2": "state10903"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1286",
+      "op2": "state10125"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1039",
+      "op2": "state9955"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1430",
+      "op2": "state10256"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1424",
+      "op2": "state10250"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1396",
+      "op2": "state10222"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1408",
+      "op2": "state10234"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1413",
+      "op2": "state10239"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2682",
+      "op2": "state11174"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2179",
+      "op2": "state10813"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3694",
+      "op2": "state11965"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2472",
+      "op2": "state11064"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1033",
+      "op2": "state9950"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3965",
+      "op2": "state12228"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3968",
+      "op2": "state12231"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3719",
+      "op2": "state11990"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1401",
+      "op2": "state10227"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1425",
+      "op2": "state10251"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1397",
+      "op2": "state10223"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3981",
+      "op2": "state12244"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1079",
+      "op2": "state9994"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state812",
+      "op2": "state9748"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4026",
+      "op2": "state12282"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3487",
+      "op2": "state11790"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2272",
+      "op2": "state10898"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4082",
+      "op2": "state12298"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4118",
+      "op2": "state12330"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1962",
+      "op2": "state10690"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1353",
+      "op2": "state10183"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4126",
+      "op2": "state12338"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state677",
+      "op2": "state9648"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1240",
+      "op2": "state10092"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state817",
+      "op2": "state9753"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state691",
+      "op2": "state9661"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2723",
+      "op2": "state11211"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2796",
+      "op2": "state11282"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state598",
+      "op2": "state9635"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2790",
+      "op2": "state11278"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4350",
+      "op2": "state12495"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state595",
+      "op2": "state9632"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4357",
+      "op2": "state12502"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2810",
+      "op2": "state11296"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4358",
+      "op2": "state12503"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4484",
+      "op2": "state12515"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state683",
+      "op2": "state9654"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2887",
+      "op2": "state11354"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2804",
+      "op2": "state11290"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2964",
+      "op2": "state11371"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state409",
+      "op2": "state9598"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4849",
+      "op2": "state12813"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4854",
+      "op2": "state12818"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2974",
+      "op2": "state11381"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state5021",
+      "op2": "state12908"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state405",
+      "op2": "state9595"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3124",
+      "op2": "state11517"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4855",
+      "op2": "state12819"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state5212",
+      "op2": "state12983"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state5350",
+      "op2": "state13053"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2970",
+      "op2": "state11377"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state483",
+      "op2": "state9610"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state5524",
+      "op2": "state13163"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1138",
+      "op2": "state10053"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3120",
+      "op2": "state11513"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3429",
+      "op2": "state11737"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3486",
+      "op2": "state11789"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state5351",
+      "op2": "state13054"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state5379",
+      "op2": "state13082"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3210",
+      "op2": "state11602"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state5530",
+      "op2": "state13169"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2017",
+      "op2": "state10711"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state730",
+      "op2": "state9682"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3727",
+      "op2": "state11998"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3695",
+      "op2": "state11966"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3697",
+      "op2": "state11968"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state877",
+      "op2": "state9803"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1282",
+      "op2": "state10121"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1387",
+      "op2": "state10213"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3127",
+      "op2": "state11520"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1139",
+      "op2": "state10054"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state228",
+      "op2": "state9507"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state326",
+      "op2": "state9584"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2445",
+      "op2": "state11039"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state205",
+      "op2": "state9487"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4184",
+      "op2": "state12394"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3856",
+      "op2": "state12120"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2685",
+      "op2": "state11177"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2462",
+      "op2": "state11054"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3794",
+      "op2": "state12058"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3705",
+      "op2": "state11976"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2710",
+      "op2": "state11202"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3287",
+      "op2": "state11645"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3134",
+      "op2": "state11527"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2656",
+      "op2": "state11150"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2469",
+      "op2": "state11061"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3696",
+      "op2": "state11967"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state2319",
+      "op2": "state10939"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state3998",
+      "op2": "state12258"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1400",
+      "op2": "state10226"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state1043",
+      "op2": "state9959"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state4163",
+      "op2": "state12375"
+    }
+  },
+  {
+    "predicate_type": "eq",
+    "operands": {
+      "op1": "state104",
+      "op2": "state107"
+    }
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {"predicate_type": "smt2", "operands": {"op1": "(= (bvadd state24 (bvmul state21 state23)) (bvmul ((_ sign_extend 32) state19) ((_ sign_extend 32) state20)))"}, "comment": "loop invariant: z + x*y == sext(a)*sext(b)"},
+  {"predicate_type": "eq", "operands": {"op1": "state23", "op2": "0"}, "comment": "y == 0 (loop exit)"},
+  {"predicate_type": "smt2", "operands": {"op1": "(= (bvand state23 (_ bv1 64)) (_ bv1 64))"}, "comment": "y is odd"},
+  {"predicate_type": "smt2", "operands": {"op1": "(bvslt state22 (_ bv10 32))"}, "comment": "counter < 10 (unwind bound)"},
+  {"predicate_type": "smt2", "operands": {"op1": "(= state24 (bvmul ((_ sign_extend 32) state19) ((_ sign_extend 32) state20)))"}, "comment": "z == a*b (post-condition)"}
+]

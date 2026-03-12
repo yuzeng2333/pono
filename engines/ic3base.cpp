@@ -18,7 +18,11 @@
 #include "engines/ic3base.h"
 
 #include <cassert>
+#include <csignal>
 #include <cstddef>
+#include <fstream>
+#include <map>
+#include <sstream>
 #include <vector>
 
 #include "core/prop.h"
@@ -33,6 +37,9 @@
 
 using namespace smt;
 using namespace std;
+
+// Declared in pono.cpp — signal handler sets this to request graceful exit
+extern volatile sig_atomic_t g_terminate_requested;
 
 namespace pono {
 
@@ -172,6 +179,12 @@ ProverResult IC3Base::check_until(int k)
   int i = reached_k_ + 1;
   assert(reached_k_ + 1 >= 0);
   while (i <= k) {
+    // Check for graceful termination request (e.g., SIGTERM from timeout)
+    if (g_terminate_requested) {
+      logger.log(0, "IC3Base: termination requested at frame {}, exiting gracefully", i);
+      return ProverResult::UNKNOWN;
+    }
+
     res = step(i);
 
     if (res == ProverResult::FALSE) {
@@ -566,36 +579,41 @@ bool IC3Base::rel_ind_check(size_t i,
       }
     }
     assert(ic3formula_check_valid(out));
-  } else if (options_.ic3_unsatcore_gen_) {
-    assert(r.is_unsat());  // not expecting to get unknown
-
-    // Use unsat core to get cheap generalization
-    UnorderedTermSet core;
-    solver_->get_unsat_assumptions(core);
-    assert(core.size());
-
-    TermVec gen;  // cheap unsat-core generalization of c
-    TermVec rem;  // conjuncts removed by unsat core
-    // might need to be re-added if it
-    // ends up intersecting with initial
-    assert(assumps_.size() == c.children.size());
-    for (size_t i = 0; i < assumps_.size(); ++i) {
-      if (core.find(assumps_.at(i)) == core.end()) {
-        rem.push_back(c.children.at(i));
-      } else {
-        gen.push_back(c.children.at(i));
-      }
-    }
-
-    fix_if_intersects_initial(gen, rem);
-    assert(gen.size() >= core.size());
-
-    // keep it as a conjunction for now
-    out = ic3formula_conjunction(gen);
   } else {
     assert(r.is_unsat());  // not expecting to get unknown
-    // don't generalize with an unsat core, just keep c
-    out = c;
+
+    if (assumps_.size() > 0) {
+      // Use unsat core to get cheap generalization
+      UnorderedTermSet core;
+      solver_->get_unsat_assumptions(core);
+
+      if (core.size() > 0) {
+        TermVec gen;  // cheap unsat-core generalization of c
+        TermVec rem;  // conjuncts removed by unsat core
+        // might need to be re-added if it
+        // ends up intersecting with initial
+        assert(assumps_.size() == c.children.size());
+        for (size_t i = 0; i < assumps_.size(); ++i) {
+          if (core.find(assumps_.at(i)) == core.end()) {
+            rem.push_back(c.children.at(i));
+          } else {
+            gen.push_back(c.children.at(i));
+          }
+        }
+
+        fix_if_intersects_initial(gen, rem);
+        assert(gen.size() >= core.size());
+
+        // keep it as a conjunction for now
+        out = ic3formula_conjunction(gen);
+      } else {
+        // empty unsat core -- just keep c
+        out = c;
+      }
+    } else {
+      // no assumptions to generalize with -- just keep c
+      out = c;
+    }
   }
 
   pop_solver_context();
@@ -632,6 +650,13 @@ bool IC3Base::block_all()
     proof_goals.new_proof_goal(goal, frontier_idx(), nullptr);
 
     while (!proof_goals.empty()) {
+      // Check for graceful termination inside proof goal processing
+      if (g_terminate_requested) {
+        logger.log(0, "IC3Base: termination requested during block_all, exiting");
+        proof_goals.clear();
+        return true;  // pretend success so IC3 exits cleanly to dump frames
+      }
+
       const ProofGoal * pg = proof_goals.top();
 
       if (!pg->idx) {
@@ -1136,6 +1161,154 @@ smt::Term IC3Base::smart_not(const Term & t) const
   } else {
     return solver_->make_term(Not, t);
   }
+}
+
+// JSON helper: escape a string for JSON output
+static string json_escape(const string & s)
+{
+  string out;
+  out.reserve(s.size() + 10);
+  for (char c : s) {
+    switch (c) {
+      case '"': out += "\\\""; break;
+      case '\\': out += "\\\\"; break;
+      case '\n': out += "\\n"; break;
+      case '\t': out += "\\t"; break;
+      default: out += c;
+    }
+  }
+  return out;
+}
+
+void IC3Base::dump_frames_to_json(const string & filename,
+                                  const string & engine_name) const
+{
+  ofstream fout(filename);
+  if (!fout.is_open()) {
+    logger.log(0, "ERROR: cannot open {} for writing", filename);
+    return;
+  }
+
+  // Collect all unique atoms and their statistics
+  // atom_str -> {count, pos_count, neg_count, min_frame, max_frame}
+  struct AtomStats
+  {
+    int count = 0;
+    int pos_count = 0;
+    int neg_count = 0;
+    size_t min_frame = SIZE_MAX;
+    size_t max_frame = 0;
+  };
+  map<string, AtomStats> atom_stats;
+
+  // Pre-scan all frames to collect atom stats
+  for (size_t i = 1; i < frames_.size(); ++i) {
+    for (const auto & clause : frames_[i]) {
+      for (const auto & lit : clause.children) {
+        string lit_str = lit->to_string();
+        bool negated = false;
+        string atom_str = lit_str;
+        Op op = lit->get_op();
+        if (op == Not || op == BVNot) {
+          negated = true;
+          TermVec ch(lit->begin(), lit->end());
+          atom_str = ch[0]->to_string();
+        }
+        auto & st = atom_stats[atom_str];
+        st.count++;
+        if (negated) {
+          st.neg_count++;
+        } else {
+          st.pos_count++;
+        }
+        if (i < st.min_frame) st.min_frame = i;
+        if (i > st.max_frame) st.max_frame = i;
+      }
+    }
+  }
+
+  // Write JSON
+  fout << "{\n";
+  fout << "  \"engine\": \"" << json_escape(engine_name) << "\",\n";
+  fout << "  \"num_frames\": " << frames_.size() << ",\n";
+
+  // Frames array
+  fout << "  \"frames\": [\n";
+  bool first_frame = true;
+  for (size_t i = 1; i < frames_.size(); ++i) {
+    if (!first_frame) fout << ",\n";
+    first_frame = false;
+    fout << "    {\n";
+    fout << "      \"level\": " << i << ",\n";
+    fout << "      \"num_clauses\": " << frames_[i].size() << ",\n";
+    fout << "      \"clauses\": [\n";
+    bool first_clause = true;
+    for (const auto & clause : frames_[i]) {
+      if (!first_clause) fout << ",\n";
+      first_clause = false;
+      fout << "        {\n";
+      fout << "          \"clause_str\": \""
+           << json_escape(clause.term->to_string()) << "\",\n";
+      fout << "          \"num_literals\": " << clause.children.size() << ",\n";
+      fout << "          \"literals\": [\n";
+      bool first_lit = true;
+      for (const auto & lit : clause.children) {
+        if (!first_lit) fout << ",\n";
+        first_lit = false;
+        string lit_str = lit->to_string();
+        bool negated = false;
+        string atom_str = lit_str;
+        Op op = lit->get_op();
+        if (op == Not || op == BVNot) {
+          negated = true;
+          TermVec ch(lit->begin(), lit->end());
+          atom_str = ch[0]->to_string();
+        }
+        fout << "            {\"str\": \"" << json_escape(lit_str)
+             << "\", \"negated\": " << (negated ? "true" : "false")
+             << ", \"atom\": \"" << json_escape(atom_str) << "\"}";
+      }
+      fout << "\n          ]\n";
+      fout << "        }";
+    }
+    fout << "\n      ]\n";
+    fout << "    }";
+  }
+  fout << "\n  ],\n";
+
+  // All atoms list
+  fout << "  \"all_atoms\": [\n";
+  {
+    bool first = true;
+    for (const auto & kv : atom_stats) {
+      if (!first) fout << ",\n";
+      first = false;
+      fout << "    \"" << json_escape(kv.first) << "\"";
+    }
+  }
+  fout << "\n  ],\n";
+
+  // Atom statistics
+  fout << "  \"atom_stats\": {\n";
+  {
+    bool first = true;
+    for (const auto & kv : atom_stats) {
+      if (!first) fout << ",\n";
+      first = false;
+      fout << "    \"" << json_escape(kv.first) << "\": {"
+           << "\"count\": " << kv.second.count
+           << ", \"pos_count\": " << kv.second.pos_count
+           << ", \"neg_count\": " << kv.second.neg_count
+           << ", \"min_frame\": " << kv.second.min_frame
+           << ", \"max_frame\": " << kv.second.max_frame << "}";
+    }
+  }
+  fout << "\n  }\n";
+  fout << "}\n";
+
+  fout.close();
+  logger.log(
+      0, "Blocking clauses dumped to {} ({} atoms)", filename, atom_stats.size());
 }
 
 }  // namespace pono

@@ -1,0 +1,19 @@
+[
+  {"predicate_type": "eq", "operands": {"op1": "state1458", "op2": "state1467"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1459", "op2": "state1468"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1460", "op2": "state1469"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1461", "op2": "state1470"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1462", "op2": "state1471"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1467", "op2": "state1472"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1468", "op2": "state1473"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1469", "op2": "state1474"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1470", "op2": "state1475"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1471", "op2": "state1476"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1464", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1465", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1466", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1515", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1516", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1517", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state1518", "op2": "0"}}
+]

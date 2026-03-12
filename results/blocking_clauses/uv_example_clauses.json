@@ -1,0 +1,32 @@
+{
+  "engine": "ic3ia",
+  "num_frames": 3,
+  "frames": [
+    {
+      "level": 1,
+      "num_clauses": 0,
+      "clauses": [
+
+      ]
+    },
+    {
+      "level": 2,
+      "num_clauses": 1,
+      "clauses": [
+        {
+          "clause_str": "(= state8 state6)",
+          "num_literals": 1,
+          "literals": [
+            {"str": "(= state8 state6)", "negated": false, "atom": "(= state8 state6)"}
+          ]
+        }
+      ]
+    }
+  ],
+  "all_atoms": [
+    "(= state8 state6)"
+  ],
+  "atom_stats": {
+    "(= state8 state6)": {"count": 1, "pos_count": 1, "neg_count": 0, "min_frame": 2, "max_frame": 2}
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "engine": "ic3ia",
+  "num_frames": 4,
+  "frames": [
+    {
+      "level": 1,
+      "num_clauses": 1,
+      "clauses": [
+        {
+          "clause_str": "(or (not (= state17 #b0000000000000000)) (= state28 #b1))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state28 #b1)", "negated": false, "atom": "(= state28 #b1)"},
+            {"str": "(not (= state17 #b0000000000000000))", "negated": true, "atom": "(= state17 #b0000000000000000)"}
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "num_clauses": 0,
+      "clauses": [
+
+      ]
+    },
+    {
+      "level": 3,
+      "num_clauses": 1,
+      "clauses": [
+        {
+          "clause_str": "(or (= state28 #b1) (= state9 #b0000))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state28 #b1)", "negated": false, "atom": "(= state28 #b1)"},
+            {"str": "(= state9 #b0000)", "negated": false, "atom": "(= state9 #b0000)"}
+          ]
+        }
+      ]
+    }
+  ],
+  "all_atoms": [
+    "(= state17 #b0000000000000000)",
+    "(= state28 #b1)",
+    "(= state9 #b0000)"
+  ],
+  "atom_stats": {
+    "(= state17 #b0000000000000000)": {"count": 1, "pos_count": 0, "neg_count": 1, "min_frame": 1, "max_frame": 1},
+    "(= state28 #b1)": {"count": 2, "pos_count": 2, "neg_count": 0, "min_frame": 1, "max_frame": 3},
+    "(= state9 #b0000)": {"count": 1, "pos_count": 1, "neg_count": 0, "min_frame": 3, "max_frame": 3}
+  }
+}

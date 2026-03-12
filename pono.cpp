@@ -16,13 +16,17 @@
 
 #include <cassert>
 #include <csignal>
+#include <fstream>
 #include <iostream>
+#include <unistd.h>
 
 #ifdef WITH_PROFILING
 #include <gperftools/profiler.h>
 #endif
 
 #include "core/fts.h"
+#include "core/unroller.h"
+#include "engines/ic3base.h"
 #include "engines/kliveness.h"
 #include "frontends/btor2_encoder.h"
 #include "frontends/smv_encoder.h"
@@ -46,6 +50,158 @@
 using namespace pono;
 using namespace smt;
 using namespace std;
+
+// Global flag for graceful termination — signal handler only sets this flag.
+// IC3 main loop checks it and exits cleanly, then normal dump code runs.
+volatile sig_atomic_t g_terminate_requested = 0;
+
+void terminate_signal_handler(int sig)
+{
+  g_terminate_requested = 1;
+  // Write a message (write() is async-signal-safe, unlike cerr/printf)
+  const char msg[] = "Signal received, requesting graceful termination...\n";
+  write(STDERR_FILENO, msg, sizeof(msg) - 1);
+}
+
+/** Simulate the transition system for N steps and dump state values as JSON.
+ *  Uses the Unroller to create Init(s0) ^ T(s0,s1) ^ ... ^ T(s_{N-1},s_N)
+ *  then asks the SAT solver for a satisfying assignment (random valid trace).
+ */
+void simulate_and_dump(TransitionSystem & ts,
+                       const SmtSolver & s,
+                       unsigned int num_steps,
+                       const string & output_path)
+{
+  // Use a fresh solver for simulation to avoid conflicts
+  SmtSolver sim_solver = create_solver(SolverEnum::BZLA);
+  sim_solver->set_opt("produce-models", "true");
+
+  // Copy transition system to the new solver
+  TermTranslator tt(sim_solver);
+  Term init_sim = tt.transfer_term(ts.init());
+  Term trans_sim = tt.transfer_term(ts.trans());
+
+  // Build variable maps (track both human names and SMT internal names)
+  vector<Term> state_vars_sim;
+  vector<Term> state_vars_orig;
+  vector<string> state_names;      // human-readable names
+  vector<string> state_smt_names;  // internal SMT names (stateN)
+
+  for (const auto & sv : ts.statevars()) {
+    Term sv_sim = tt.transfer_term(sv);
+    state_vars_sim.push_back(sv_sim);
+    state_vars_orig.push_back(sv);
+    string name = ts.get_name(sv);
+    string smt_name = sv->to_string();
+    if (name.empty()) name = smt_name;
+    state_names.push_back(name);
+    state_smt_names.push_back(smt_name);
+  }
+
+  // Build the unrolled formula manually using substitution
+  // Step 0: assert init
+  // For each step k: create timed copies of state vars and assert trans
+
+  // Create timed variables: var@k for each state var and each step
+  auto make_timed_var = [&](const Term & var, unsigned int k) -> Term {
+    Sort sort = var->get_sort();
+    string name = var->to_string() + "@" + to_string(k);
+    return sim_solver->make_symbol(name, sort);
+  };
+
+  // Create state variables at each time step
+  vector<vector<Term>> timed_states(num_steps + 1);
+  for (unsigned int k = 0; k <= num_steps; k++) {
+    for (size_t i = 0; i < state_vars_sim.size(); i++) {
+      timed_states[k].push_back(make_timed_var(state_vars_sim[i], k));
+    }
+  }
+
+  // Create input variables at each time step
+  vector<Term> input_vars_sim;
+  for (const auto & iv : ts.inputvars()) {
+    input_vars_sim.push_back(tt.transfer_term(iv));
+  }
+  vector<vector<Term>> timed_inputs(num_steps);
+  for (unsigned int k = 0; k < num_steps; k++) {
+    for (size_t i = 0; i < input_vars_sim.size(); i++) {
+      Sort sort = input_vars_sim[i]->get_sort();
+      string name = input_vars_sim[i]->to_string() + "@" + to_string(k);
+      timed_inputs[k].push_back(sim_solver->make_symbol(name, sort));
+    }
+  }
+
+  // Assert init with state@0 substituted
+  UnorderedTermMap init_subst;
+  for (size_t i = 0; i < state_vars_sim.size(); i++) {
+    init_subst[state_vars_sim[i]] = timed_states[0][i];
+  }
+  Term init_at_0 = sim_solver->substitute(init_sim, init_subst);
+  sim_solver->assert_formula(init_at_0);
+
+  // Get next-state variables
+  vector<Term> next_vars_sim;
+  for (const auto & sv : ts.statevars()) {
+    Term nv = ts.next(sv);
+    next_vars_sim.push_back(tt.transfer_term(nv));
+  }
+
+  // Assert transition at each step
+  for (unsigned int k = 0; k < num_steps; k++) {
+    UnorderedTermMap trans_subst;
+    // current state -> state@k
+    for (size_t i = 0; i < state_vars_sim.size(); i++) {
+      trans_subst[state_vars_sim[i]] = timed_states[k][i];
+    }
+    // next state -> state@(k+1)
+    for (size_t i = 0; i < next_vars_sim.size(); i++) {
+      trans_subst[next_vars_sim[i]] = timed_states[k + 1][i];
+    }
+    // inputs -> input@k
+    for (size_t i = 0; i < input_vars_sim.size(); i++) {
+      trans_subst[input_vars_sim[i]] = timed_inputs[k][i];
+    }
+    Term trans_at_k = sim_solver->substitute(trans_sim, trans_subst);
+    sim_solver->assert_formula(trans_at_k);
+  }
+
+  // Solve
+  Result r = sim_solver->check_sat();
+  if (!r.is_sat()) {
+    cerr << "Warning: simulation formula is unsatisfiable (deadlock after "
+         << num_steps << " steps)" << endl;
+    return;
+  }
+
+  // Extract values and write JSON  
+  ofstream out(output_path);
+  // Write name map: SMT internal name -> human name
+  out << "{\"name_map\": {";
+  for (size_t i = 0; i < state_names.size(); i++) {
+    if (i > 0) out << ", ";
+    out << "\"" << state_smt_names[i] << "\": \"" << state_names[i] << "\"";
+  }
+  out << "},\n\"steps\": [\n";
+  for (unsigned int k = 0; k <= num_steps; k++) {
+    out << "  {";
+    for (size_t i = 0; i < state_vars_sim.size(); i++) {
+      Term val = sim_solver->get_value(timed_states[k][i]);
+      string val_str = val->to_string();
+      // Clean up bitwuzla value format: #b0101 -> 0101
+      if (val_str.size() >= 2 && val_str[0] == '#' && val_str[1] == 'b') {
+        val_str = val_str.substr(2);
+      }
+      if (i > 0) out << ", ";
+      out << "\"" << state_names[i] << "\": \"" << val_str << "\"";
+    }
+    out << "}" << (k < num_steps ? "," : "") << "\n";
+  }
+  out << "]}\n";
+  out.close();
+
+  cout << "Simulation trace (" << (num_steps + 1) << " steps) written to "
+       << output_path << endl;
+}
 
 ProverResult check_prop(PonoOptions pono_options,
                         Term & prop,
@@ -145,10 +301,6 @@ ProverResult check_prop(PonoOptions pono_options,
   }
   assert(prover);
 
-  // TODO: handle this in a more elegant way in the future
-  //       consider calling prover for CegProphecyArrays (so that underlying
-  //       model checker runs prove unbounded) or possibly, have a command line
-  //       flag to pick between the two
   ProverResult r;
   if (pono_options.engine_ == MSAT_IC3IA) {
     // HACK MSAT_IC3IA does not support check_until
@@ -200,6 +352,18 @@ ProverResult check_prop(PonoOptions pono_options,
       throw PonoException("Invariant Check FAILED");
     }
   }
+
+  // Dump blocking clauses if requested (works for all IC3 variants and any result)
+  if (!pono_options.dump_blocking_clauses_.empty()) {
+    auto ic3_prover = std::dynamic_pointer_cast<IC3Base>(prover);
+    if (ic3_prover) {
+      ic3_prover->dump_frames_to_json(pono_options.dump_blocking_clauses_,
+                                      to_string(pono_options.engine_));
+    } else {
+      logger.log(0, "Warning: --dump-blocking-clauses only works with IC3 engines");
+    }
+  }
+
   return r;
 }
 
@@ -241,6 +405,12 @@ int main(int argc, char ** argv)
 
   // set logger verbosity -- can only be set once
   logger.set_verbosity(pono_options.verbosity_);
+
+  // Register signal handler for graceful termination (flag-based, no deadlock)
+  if (!pono_options.dump_blocking_clauses_.empty()) {
+    signal(SIGTERM, terminate_signal_handler);
+    signal(SIGINT, terminate_signal_handler);
+  }
 
   // For profiling: set signal handlers for common signals to abort
   // program.  This is necessary to gracefully stop profiling when,
@@ -333,6 +503,13 @@ int main(int argc, char ** argv)
         }
       } else {
         prop = propvec[pono_options.prop_idx_];
+      }
+
+      // Run simulation if requested (before any TS modifications)
+      if (pono_options.simulate_steps_ > 0
+          && !pono_options.simulate_output_.empty()) {
+        simulate_and_dump(fts, s, pono_options.simulate_steps_,
+                          pono_options.simulate_output_);
       }
 
       vector<UnorderedTermMap> cex;

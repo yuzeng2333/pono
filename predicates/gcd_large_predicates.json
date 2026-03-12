@@ -1,0 +1,12 @@
+[
+  {"predicate_type": "eq", "operands": {"op1": "state37", "op2": "state97"}, "comment": "u1.x == u2.x (x registers equal)"},
+  {"predicate_type": "eq", "operands": {"op1": "state29", "op2": "state92"}, "comment": "u1.y == u2.y (y registers equal)"},
+  {"predicate_type": "eq", "operands": {"op1": "state45", "op2": "state104"}, "comment": "u1.select_ln13 == u2.select_ln13"},
+  {"predicate_type": "eq", "operands": {"op1": "state51", "op2": "state110"}, "comment": "u1.select_ln13_1 == u2.select_ln13_1"},
+  {"predicate_type": "eq", "operands": {"op1": "state18", "op2": "state19"}, "comment": "gcd_output1 == gcd_output2 (property)"},
+  {"predicate_type": "smt2", "operands": {"op1": "(= state37 state29)"}, "comment": "u1.x == u1.y (GCD convergence)"},
+  {"predicate_type": "smt2", "operands": {"op1": "(= state97 state92)"}, "comment": "u2.x == u2.y (GCD convergence)"},
+  {"predicate_type": "smt2", "operands": {"op1": "(bvult state37 state29)"}, "comment": "u1.x < u1.y"},
+  {"predicate_type": "smt2", "operands": {"op1": "(bvult state97 state92)"}, "comment": "u2.x < u2.y"},
+  {"predicate_type": "eq", "operands": {"op1": "state12", "op2": "state14"}, "comment": "v1_buf == v2_buf (valid flags synchronized)"}
+]

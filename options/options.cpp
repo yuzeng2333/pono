@@ -67,12 +67,14 @@ enum optionIndex
   NO_IC3_INDGEN,
   IC3_GEN_MAX_ITER,
   IC3_FUNCTIONAL_PREIMAGE,
-  NO_IC3_UNSATCORE_GEN,
   NO_IC3IA_REDUCE_PREDS,
   NO_IC3IA_TRACK_IMPORTANT_VARS,
   NO_IC3IA_SIM_CEX,
   IC3IA_PREDICATES,
   IC3IA_SKIP_INIT_PREDS,
+  DUMP_BLOCKING_CLAUSES,
+  SIMULATE_STEPS,
+  SIMULATE_OUTPUT,
   NO_IC3SA_FUNC_REFINE,
   MBIC3_INDGEN_MODE,
   PROFILING_LOG_FILENAME,
@@ -389,16 +391,6 @@ const option::Descriptor usage[] = {
     "ic3-functional-preimage",
     Arg::None,
     "  --ic3-functional-preimage \tUse functional preimage in ic3." },
-  { NO_IC3_UNSATCORE_GEN,
-    0,
-    "",
-    "no-ic3-unsatcore-gen",
-    Arg::None,
-    "  --no-ic3-unsatcore-gen \tDisable unsat core generalization during "
-    "relative induction check. That extra generalization helps several IC3 "
-    "variants but also runs the risk of myopic over-generalization. Some IC3 "
-    "variants have better inductive generalization and do better with this "
-    "option." },
   { NO_IC3IA_REDUCE_PREDS,
     0,
     "",
@@ -434,6 +426,25 @@ const option::Descriptor usage[] = {
     Arg::None,
     "  --ic3ia-skip-init-predicates \tSkip automatic predicate extraction from "
     "init and property (use only LLM/external predicates + CEGAR refinement)." },
+  { DUMP_BLOCKING_CLAUSES,
+    0,
+    "",
+    "dump-blocking-clauses",
+    Arg::NonEmpty,
+    "  --dump-blocking-clauses <path> \tDump IC3 blocking clauses to JSON file "
+    "after proof." },
+  { SIMULATE_STEPS,
+    0,
+    "",
+    "simulate",
+    Arg::Numeric,
+    "  --simulate <N> \tRun SAT-based constrained simulation for N steps." },
+  { SIMULATE_OUTPUT,
+    0,
+    "",
+    "simulate-output",
+    Arg::NonEmpty,
+    "  --simulate-output <path> \tOutput JSON file for simulation trace." },
   { NO_IC3SA_FUNC_REFINE,
     0,
     "",
@@ -969,12 +980,14 @@ ProverResult PonoOptions::parse_and_set_options(int argc,
                 "--ic3-indgen-mode value must be between 0 and 2.");
           break;
         case IC3_FUNCTIONAL_PREIMAGE: ic3_functional_preimage_ = true; break;
-        case NO_IC3_UNSATCORE_GEN: ic3_unsatcore_gen_ = false; break;
         case NO_IC3IA_REDUCE_PREDS: ic3ia_reduce_preds_ = false;
         case NO_IC3IA_TRACK_IMPORTANT_VARS: ic3ia_track_important_vars_ = false;
         case NO_IC3IA_SIM_CEX: ic3ia_sim_cex_ = false; break;
         case IC3IA_PREDICATES: ic3ia_predicate_file_ = opt.arg; break;
         case IC3IA_SKIP_INIT_PREDS: ic3ia_skip_init_preds_ = true; break;
+        case DUMP_BLOCKING_CLAUSES: dump_blocking_clauses_ = opt.arg; break;
+        case SIMULATE_STEPS: simulate_steps_ = std::stoul(opt.arg); break;
+        case SIMULATE_OUTPUT: simulate_output_ = opt.arg; break;
         case NO_IC3SA_FUNC_REFINE: ic3sa_func_refine_ = false; break;
         case PROFILING_LOG_FILENAME:
 #ifndef WITH_PROFILING

@@ -1,0 +1,13 @@
+[
+  {"predicate_type": "ult", "operands": {"op1": "state24", "op2": "state25"}},
+  {"predicate_type": "ule", "operands": {"op1": "state24", "op2": "state25"}},
+  {"predicate_type": "eq", "operands": {"op1": "state30", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state31", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state27", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state28", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state29", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state21", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state22", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state23", "op2": "0"}},
+  {"predicate_type": "eq", "operands": {"op1": "state24", "op2": "0"}}
+]

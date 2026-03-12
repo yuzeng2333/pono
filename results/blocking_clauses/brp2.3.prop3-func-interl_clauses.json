@@ -1,0 +1,2881 @@
+{
+  "engine": "ic3ia",
+  "num_frames": 11,
+  "frames": [
+    {
+      "level": 1,
+      "num_clauses": 9,
+      "clauses": [
+        {
+          "clause_str": "(or (not (= state46 #b0)) (= state54 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state54 #b0)", "negated": false, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state46 #b0))", "negated": true, "atom": "(= state46 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state35 #b00000000)) (= state60 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state60 #b0)", "negated": false, "atom": "(= state60 #b0)"},
+            {"str": "(not (= state35 #b00000000))", "negated": true, "atom": "(= state35 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state29 #b00000000)) (not (= state50 #b0))) (= state80 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state80 #b0)", "negated": false, "atom": "(= state80 #b0)"},
+            {"str": "(not (= state50 #b0))", "negated": true, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(= state41 #b00000000)",
+          "num_literals": 1,
+          "literals": [
+            {"str": "(= state41 #b00000000)", "negated": false, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state86 #b0)) (= state64 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state64 #b0)", "negated": false, "atom": "(= state64 #b0)"},
+            {"str": "(= state86 #b0)", "negated": false, "atom": "(= state86 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state23 #b0000000000000000)) (= state64 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state64 #b0)", "negated": false, "atom": "(= state64 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state64 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state64 #b0)", "negated": false, "atom": "(= state64 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state86 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state86 #b0)", "negated": false, "atom": "(= state86 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state21 #b0000000000000000)) (= state86 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state86 #b0)", "negated": false, "atom": "(= state86 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "num_clauses": 5,
+      "clauses": [
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state41 #b00000000))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state41 #b00000000)", "negated": false, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state56 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state37 #b00000000))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state37 #b00000000)", "negated": false, "atom": "(= state37 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state86 #b0)) (= state64 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state64 #b0)", "negated": false, "atom": "(= state64 #b0)"},
+            {"str": "(= state86 #b0)", "negated": false, "atom": "(= state86 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state86 #b0)) (not (= state96 #b0))) (= state29 #b00000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state29 #b00000000)", "negated": false, "atom": "(= state29 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state86 #b0))", "negated": true, "atom": "(= state86 #b0)"}
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "num_clauses": 5,
+      "clauses": [
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state62 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state84 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state66 #b0)) (= state41 #b00000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state41 #b00000000)", "negated": false, "atom": "(= state41 #b00000000)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state21 #b0000000000000000)) (not (= state96 #b0))) (= state23 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state58 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "num_clauses": 9,
+      "clauses": [
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state21 #b0000000000000000)) (= state58 #b0)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state66 #b0)) (= state84 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state66 #b0)) (= state70 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state41 #b00000000)) (= state56 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state41 #b00000000)", "negated": false, "atom": "(= state41 #b00000000)"},
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state58 #b0)) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state46 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state46 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state82 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state82 #b0)", "negated": false, "atom": "(= state82 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state58 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "num_clauses": 12,
+      "clauses": [
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state21 #b0000000000000000)) (= state58 #b0)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state70 #b0)) (not (= state96 #b0))) (= state62 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state70 #b0)) (= state56 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state58 #b0)) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state48 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state58 #b0)) (= state39 #b00000000)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state21 #b0000000000000000)) (not (= state96 #b0))) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state70 #b0)) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state48 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state72 #b0)) (not (= state96 #b0))) (= state39 #b00000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(not (= state72 #b0))", "negated": true, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state33 #b00000000))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state70 #b0)) (not (= state96 #b0))) (= state58 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "num_clauses": 21,
+      "clauses": [
+        {
+          "clause_str": "(or (or (or (not (= state70 #b0)) (not (= state96 #b0))) (= state58 #b0)) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state50 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state17 #b00000000)) (not (= state29 #b00000000))) (not (= state96 #b0))) (= state88 #b0)) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state17 #b00000000))", "negated": true, "atom": "(= state17 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state41 #b00000000)) (not (= state96 #b0))) (= state33 #b00000000)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state88 #b0)) (= state58 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state88 #b0)) (= state58 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state17 #b00000000)) (not (= state29 #b00000000))) (not (= state96 #b0))) (= state88 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state17 #b00000000))", "negated": true, "atom": "(= state17 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state88 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state52 #b0)) (= state33 #b00000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state90 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state52 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state41 #b00000000)) (not (= state96 #b0))) (= state31 #b00000000)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state31 #b00000000)", "negated": false, "atom": "(= state31 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state58 #b0)) (= state52 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state58 #b0)) (= state39 #b00000000)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state52 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state76 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state76 #b0)", "negated": false, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state21 #b0000000000000000)) (not (= state96 #b0))) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state70 #b0)) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state70 #b0)) (= state33 #b00000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state66 #b0)) (= state33 #b00000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state68 #b0)) (= state39 #b00000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "num_clauses": 25,
+      "clauses": [
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state21 #b0000000000000000)) (= state39 #b00000000)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state19 #b0000000000000000)) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state68 #b0)) (= state39 #b00000000))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(not (= state19 #b0000000000000000))", "negated": true, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state96 #b0)) (= state68 #b0)) (= state58 #b0)) (= state39 #b00000000)) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state39 #b00000000)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state60 #b0)) (= state50 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(= state60 #b0)", "negated": false, "atom": "(= state60 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state90 #b0)) (= state52 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state52 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state31 #b00000000)) (not (= state41 #b00000000))) (not (= state96 #b0))) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state31 #b00000000))", "negated": true, "atom": "(= state31 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state41 #b00000000)) (not (= state96 #b0))) (= state52 #b0)) (= state33 #b00000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state41 #b00000000))) (not (= state96 #b0))) (= state88 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state29 #b00000000)) (not (= state72 #b0))) (not (= state96 #b0))) (= state88 #b0)) (= state58 #b0)) (= state39 #b00000000))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state72 #b0))", "negated": true, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state68 #b0)) (= state84 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state70 #b0)) (= state50 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state58 #b0)) (= state39 #b00000000)) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state52 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state23 #b0000000000000000)) (= state74 #b0)) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state74 #b0)", "negated": false, "atom": "(= state74 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state52 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state52 #b0)) (= state25 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state25 #b0000000000000000)", "negated": false, "atom": "(= state25 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state21 #b0000000000000000)) (= state68 #b0)) (= state62 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state60 #b0))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state60 #b0)", "negated": false, "atom": "(= state60 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state56 #b0)) (= state52 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state70 #b0)) (= state52 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state70 #b0)) (not (= state96 #b0))) (= state39 #b00000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state70 #b0)) (= state33 #b00000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (not (= state96 #b0)) (= state35 #b00000000))",
+          "num_literals": 2,
+          "literals": [
+            {"str": "(= state35 #b00000000)", "negated": false, "atom": "(= state35 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "num_clauses": 45,
+      "clauses": [
+        {
+          "clause_str": "(or (or (or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state58 #b0)) (= state39 #b00000000)) (= state48 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state78 #b0)) (= state84 #b0)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state78 #b0)", "negated": false, "atom": "(= state78 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state78 #b0)) (= state84 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state78 #b0)", "negated": false, "atom": "(= state78 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state96 #b0)) (= state23 #b0000000000000000)) (= state74 #b0)) (= state90 #b0)) (= state58 #b0)) (= state52 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state74 #b0)", "negated": false, "atom": "(= state74 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state41 #b00000000)) (not (= state96 #b0))) (= state23 #b0000000000000000)) (= state74 #b0)) (= state90 #b0)) (= state52 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state74 #b0)", "negated": false, "atom": "(= state74 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state76 #b0)) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state39 #b00000000)) (= state48 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state66 #b0)) (= state90 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state96 #b0)) (= state21 #b0000000000000000)) (= state68 #b0)) (= state90 #b0)) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state90 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state39 #b00000000)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state90 #b0)) (= state25 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state25 #b0000000000000000)", "negated": false, "atom": "(= state25 #b0000000000000000)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state90 #b0)) (= state39 #b00000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state21 #b0000000000000000)) (= state39 #b00000000)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state21 #b0000000000000000)) (= state90 #b0)) (= state39 #b00000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state66 #b0)) (= state50 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state84 #b0)) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state31 #b00000000)) (not (= state41 #b00000000))) (not (= state76 #b0))) (not (= state96 #b0))) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state31 #b00000000))", "negated": true, "atom": "(= state31 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state41 #b00000000))) (not (= state96 #b0))) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state23 #b0000000000000000)) (= state74 #b0)) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state74 #b0)", "negated": false, "atom": "(= state74 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state52 #b0)) (= state25 #b0000000000000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state25 #b0000000000000000)", "negated": false, "atom": "(= state25 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state72 #b0)) (= state50 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(= state72 #b0)", "negated": false, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state70 #b0)) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state48 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state25 #b0000000000000000)) (not (= state96 #b0))) (= state27 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state25 #b0000000000000000))", "negated": true, "atom": "(= state25 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state54 #b0)) (not (= state96 #b0))) (= state78 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state78 #b0)", "negated": false, "atom": "(= state78 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state21 #b0000000000000000)) (not (= state96 #b0))) (= state52 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state76 #b0)) (not (= state96 #b0))) (= state52 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state19 #b0000000000000000)) (not (= state96 #b0))) (= state52 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state19 #b0000000000000000))", "negated": true, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state62 #b0)) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state58 #b0)) (= state39 #b00000000)) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state41 #b00000000)) (not (= state72 #b0))) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state31 #b00000000)) (= state48 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state31 #b00000000)", "negated": false, "atom": "(= state31 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state72 #b0))", "negated": true, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state66 #b0)) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state39 #b00000000)) (not (= state96 #b0))) (= state66 #b0)) (= state70 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state39 #b00000000))", "negated": true, "atom": "(= state39 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state66 #b0)) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state96 #b0)) (= state23 #b0000000000000000)) (= state74 #b0)) (= state56 #b0)) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(= state74 #b0)", "negated": false, "atom": "(= state74 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state56 #b0)) (= state52 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state66 #b0)) (= state68 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state17 #b00000000)) (not (= state29 #b00000000))) (not (= state96 #b0))) (= state88 #b0)) (= state56 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state17 #b00000000))", "negated": true, "atom": "(= state17 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state68 #b0)) (= state56 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state56 #b0)) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state56 #b0)) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state41 #b00000000)) (not (= state96 #b0))) (= state72 #b0)) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state72 #b0)", "negated": false, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state21 #b0000000000000000)) (not (= state88 #b0))) (not (= state96 #b0))) (= state23 #b0000000000000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state88 #b0))", "negated": true, "atom": "(= state88 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state21 #b0000000000000000)) (not (= state96 #b0))) (= state23 #b0000000000000000)) (= state56 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state54 #b0)) (not (= state96 #b0))) (= state33 #b00000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"}
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "num_clauses": 50,
+      "clauses": [
+        {
+          "clause_str": "(or (or (or (or (not (= state17 #b00000000)) (not (= state29 #b00000000))) (not (= state96 #b0))) (= state94 #b0)) (= state88 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(= state94 #b0)", "negated": false, "atom": "(= state94 #b0)"},
+            {"str": "(not (= state17 #b00000000))", "negated": true, "atom": "(= state17 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state54 #b0)) (not (= state96 #b0))) (= state90 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state39 #b00000000)) (= state50 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state31 #b00000000)) (not (= state33 #b00000000))) (not (= state41 #b00000000))) (not (= state96 #b0))) (= state90 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state33 #b00000000))", "negated": true, "atom": "(= state33 #b00000000)"},
+            {"str": "(not (= state31 #b00000000))", "negated": true, "atom": "(= state31 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state84 #b0)) (= state90 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state84 #b0)) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state27 #b0000000000000000)) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state39 #b00000000)) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state27 #b0000000000000000))", "negated": true, "atom": "(= state27 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state90 #b0)) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state33 #b00000000)) (not (= state96 #b0))) (= state90 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state33 #b00000000))", "negated": true, "atom": "(= state33 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state96 #b0)) (= state66 #b0)) (= state90 #b0)) (= state52 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state39 #b00000000)) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state58 #b0)) (= state39 #b00000000))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state90 #b0)) (= state62 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state76 #b0))) (not (= state96 #b0))) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state29 #b00000000)) (not (= state41 #b00000000))) (not (= state96 #b0))) (= state23 #b0000000000000000)) (= state74 #b0)) (= state52 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state74 #b0)", "negated": false, "atom": "(= state74 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state54 #b0))) (not (= state96 #b0))) (= state74 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state74 #b0)", "negated": false, "atom": "(= state74 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state25 #b0000000000000000)) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state39 #b00000000)) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state25 #b0000000000000000))", "negated": true, "atom": "(= state25 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state54 #b0))) (not (= state78 #b0))) (not (= state96 #b0))) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state78 #b0))", "negated": true, "atom": "(= state78 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state70 #b0)) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state72 #b0)) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state72 #b0)", "negated": false, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state23 #b0000000000000000)) (not (= state96 #b0))) (= state27 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(not (= state23 #b0000000000000000))", "negated": true, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state84 #b0)) (= state52 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state76 #b0)) (not (= state96 #b0))) (= state90 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state19 #b0000000000000000)) (not (= state96 #b0))) (= state90 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state19 #b0000000000000000))", "negated": true, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state54 #b0))) (not (= state96 #b0))) (= state88 #b0)) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state25 #b0000000000000000)) (not (= state96 #b0))) (= state52 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state25 #b0000000000000000))", "negated": true, "atom": "(= state25 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state21 #b0000000000000000)) (not (= state96 #b0))) (= state90 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (or (not (= state29 #b00000000)) (not (= state72 #b0))) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state88 #b0)) (= state58 #b0)) (= state39 #b00000000))",
+          "num_literals": 7,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state72 #b0))", "negated": true, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state27 #b0000000000000000)) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state68 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state27 #b0000000000000000))", "negated": true, "atom": "(= state27 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (or (not (= state37 #b00000000)) (not (= state41 #b00000000))) (not (= state72 #b0))) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state50 #b0)) (= state31 #b00000000))",
+          "num_literals": 7,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state31 #b00000000)", "negated": false, "atom": "(= state31 #b00000000)"},
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state72 #b0))", "negated": true, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state37 #b00000000))", "negated": true, "atom": "(= state37 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (or (not (= state41 #b00000000)) (not (= state72 #b0))) (not (= state76 #b0))) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state31 #b00000000)) (= state48 #b0))",
+          "num_literals": 7,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state31 #b00000000)", "negated": false, "atom": "(= state31 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state72 #b0))", "negated": true, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state21 #b0000000000000000)) (= state39 #b00000000)) (= state50 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state76 #b0)) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state66 #b0)) (= state48 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state39 #b00000000)) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state66 #b0)) (= state70 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state39 #b00000000))", "negated": true, "atom": "(= state39 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state76 #b0)) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state58 #b0)) (= state39 #b00000000)) (= state52 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state29 #b00000000)) (not (= state41 #b00000000))) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state58 #b0)) (= state39 #b00000000))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state39 #b00000000)) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state54 #b0))) (not (= state96 #b0))) (= state88 #b0)) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state62 #b0)) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state68 #b0)) (= state88 #b0)) (= state58 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state54 #b0))) (not (= state96 #b0))) (= state88 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state88 #b0)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state17 #b00000000)) (not (= state29 #b00000000))) (not (= state96 #b0))) (= state86 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state86 #b0)", "negated": false, "atom": "(= state86 #b0)"},
+            {"str": "(not (= state17 #b00000000))", "negated": true, "atom": "(= state17 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state72 #b0)) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state72 #b0)", "negated": false, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state72 #b0)) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state72 #b0)", "negated": false, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state62 #b0)) (= state52 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state23 #b0000000000000000)) (not (= state37 #b00000000))) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state70 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state23 #b0000000000000000))", "negated": true, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state37 #b00000000))", "negated": true, "atom": "(= state37 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state39 #b00000000)) (= state48 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state66 #b0)) (= state84 #b0)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state70 #b0)) (= state78 #b0)) (= state84 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(= state78 #b0)", "negated": false, "atom": "(= state78 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "num_clauses": 97,
+      "clauses": [
+        {
+          "clause_str": "(= state8 #b0000000000000000)",
+          "num_literals": 1,
+          "literals": [
+            {"str": "(= state8 #b0000000000000000)", "negated": false, "atom": "(= state8 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(= state15 #b00000000)",
+          "num_literals": 1,
+          "literals": [
+            {"str": "(= state15 #b00000000)", "negated": false, "atom": "(= state15 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state84 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state96 #b0)) (= state72 #b0)) (= state78 #b0)) (= state60 #b0)) (= state46 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state60 #b0)", "negated": false, "atom": "(= state60 #b0)"},
+            {"str": "(= state72 #b0)", "negated": false, "atom": "(= state72 #b0)"},
+            {"str": "(= state78 #b0)", "negated": false, "atom": "(= state78 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state64 #b0)) (not (= state96 #b0))) (= state70 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state64 #b0))", "negated": true, "atom": "(= state64 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state64 #b0)) (not (= state96 #b0))) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state64 #b0))", "negated": true, "atom": "(= state64 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state64 #b0)) (not (= state96 #b0))) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state64 #b0))", "negated": true, "atom": "(= state64 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state46 #b0)) (= state25 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state25 #b0000000000000000)", "negated": false, "atom": "(= state25 #b0000000000000000)"},
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state48 #b0)) (= state25 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state25 #b0000000000000000)", "negated": false, "atom": "(= state25 #b0000000000000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state46 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state29 #b00000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state94 #b0)) (= state88 #b0)) (= state60 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state60 #b0)", "negated": false, "atom": "(= state60 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(= state94 #b0)", "negated": false, "atom": "(= state94 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state27 #b0000000000000000)) (not (= state54 #b0))) (not (= state70 #b0))) (not (= state96 #b0))) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state27 #b0000000000000000))", "negated": true, "atom": "(= state27 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state19 #b0000000000000000)) (not (= state64 #b0))) (not (= state96 #b0))) (= state23 #b0000000000000000)) (= state74 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state74 #b0)", "negated": false, "atom": "(= state74 #b0)"},
+            {"str": "(not (= state19 #b0000000000000000))", "negated": true, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state64 #b0))", "negated": true, "atom": "(= state64 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state21 #b0000000000000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state58 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state23 #b0000000000000000)) (not (= state76 #b0))) (not (= state96 #b0))) (= state94 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state94 #b0)", "negated": false, "atom": "(= state94 #b0)"},
+            {"str": "(not (= state23 #b0000000000000000))", "negated": true, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state17 #b00000000)) (not (= state29 #b00000000))) (not (= state96 #b0))) (= state94 #b0)) (= state86 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state86 #b0)", "negated": false, "atom": "(= state86 #b0)"},
+            {"str": "(= state94 #b0)", "negated": false, "atom": "(= state94 #b0)"},
+            {"str": "(not (= state17 #b00000000))", "negated": true, "atom": "(= state17 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(= state17 #b00000000)",
+          "num_literals": 1,
+          "literals": [
+            {"str": "(= state17 #b00000000)", "negated": false, "atom": "(= state17 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state21 #b0000000000000000)) (not (= state96 #b0))) (= state23 #b0000000000000000)) (= state74 #b0)) (= state60 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state60 #b0)", "negated": false, "atom": "(= state60 #b0)"},
+            {"str": "(= state74 #b0)", "negated": false, "atom": "(= state74 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state21 #b0000000000000000)) (not (= state66 #b0))) (not (= state70 #b0))) (not (= state88 #b0))) (not (= state96 #b0))) (= state23 #b0000000000000000))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state66 #b0))", "negated": true, "atom": "(= state66 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state88 #b0))", "negated": true, "atom": "(= state88 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state41 #b00000000)) (not (= state64 #b0))) (not (= state96 #b0))) (= state33 #b00000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state64 #b0))", "negated": true, "atom": "(= state64 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(= state12 #b0000000000000000)",
+          "num_literals": 1,
+          "literals": [
+            {"str": "(= state12 #b0000000000000000)", "negated": false, "atom": "(= state12 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state94 #b0)) (= state88 #b0)) (= state60 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state60 #b0)", "negated": false, "atom": "(= state60 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(= state94 #b0)", "negated": false, "atom": "(= state94 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state64 #b0)) (not (= state96 #b0))) (= state50 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state64 #b0))", "negated": true, "atom": "(= state64 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state64 #b0)) (not (= state96 #b0))) (= state52 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state64 #b0))", "negated": true, "atom": "(= state64 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state39 #b00000000)) (not (= state96 #b0))) (= state62 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state39 #b00000000))", "negated": true, "atom": "(= state39 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state41 #b00000000)) (not (= state72 #b0))) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state33 #b00000000)) (= state46 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state72 #b0))", "negated": true, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state50 #b0)) (= state25 #b0000000000000000))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state25 #b0000000000000000)", "negated": false, "atom": "(= state25 #b0000000000000000)"},
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(= state10 #b0000000000000000)",
+          "num_literals": 1,
+          "literals": [
+            {"str": "(= state10 #b0000000000000000)", "negated": false, "atom": "(= state10 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state41 #b00000000)) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state68 #b0)) (= state33 #b00000000)) (= state48 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state33 #b00000000)", "negated": false, "atom": "(= state33 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state39 #b00000000)) (not (= state96 #b0))) (= state72 #b0)) (= state84 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state72 #b0)", "negated": false, "atom": "(= state72 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state39 #b00000000))", "negated": true, "atom": "(= state39 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state90 #b0)) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state39 #b00000000)) (not (= state96 #b0))) (= state70 #b0)) (= state84 #b0)) (= state46 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state39 #b00000000))", "negated": true, "atom": "(= state39 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state84 #b0)) (= state50 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state37 #b00000000)) (not (= state96 #b0))) (= state56 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state37 #b00000000))", "negated": true, "atom": "(= state37 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state37 #b00000000)) (not (= state96 #b0))) (= state58 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state37 #b00000000))", "negated": true, "atom": "(= state37 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state39 #b00000000)) (not (= state96 #b0))) (= state66 #b0)) (= state70 #b0)) (= state84 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state39 #b00000000))", "negated": true, "atom": "(= state39 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state33 #b00000000)) (not (= state96 #b0))) (= state50 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state33 #b00000000))", "negated": true, "atom": "(= state33 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state33 #b00000000)) (not (= state96 #b0))) (= state90 #b0)) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state33 #b00000000))", "negated": true, "atom": "(= state33 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state29 #b00000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state88 #b0)) (= state58 #b0)) (= state46 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state23 #b0000000000000000)) (not (= state76 #b0))) (not (= state96 #b0))) (= state60 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state60 #b0)", "negated": false, "atom": "(= state60 #b0)"},
+            {"str": "(not (= state23 #b0000000000000000))", "negated": true, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state19 #b0000000000000000)) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state68 #b0)) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(not (= state19 #b0000000000000000))", "negated": true, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state88 #b0)) (not (= state96 #b0))) (= state58 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state88 #b0))", "negated": true, "atom": "(= state88 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state88 #b0)) (not (= state96 #b0))) (= state60 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state60 #b0)", "negated": false, "atom": "(= state60 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state88 #b0))", "negated": true, "atom": "(= state88 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state88 #b0)) (not (= state96 #b0))) (= state56 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state88 #b0))", "negated": true, "atom": "(= state88 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state58 #b0)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state31 #b00000000)) (not (= state33 #b00000000))) (not (= state41 #b00000000))) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state52 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state33 #b00000000))", "negated": true, "atom": "(= state33 #b00000000)"},
+            {"str": "(not (= state31 #b00000000))", "negated": true, "atom": "(= state31 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state21 #b0000000000000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state21 #b0000000000000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state21 #b0000000000000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state50 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state23 #b0000000000000000)) (not (= state96 #b0))) (= state46 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(not (= state23 #b0000000000000000))", "negated": true, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state23 #b0000000000000000)) (not (= state96 #b0))) (= state48 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(not (= state23 #b0000000000000000))", "negated": true, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state23 #b0000000000000000)) (not (= state96 #b0))) (= state50 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state23 #b0000000000000000))", "negated": true, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state60 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state60 #b0)", "negated": false, "atom": "(= state60 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state39 #b00000000)) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state66 #b0)) (= state46 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state39 #b00000000))", "negated": true, "atom": "(= state39 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state21 #b0000000000000000)) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state39 #b00000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state35 #b00000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state84 #b0)) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state35 #b00000000))", "negated": true, "atom": "(= state35 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state84 #b0)) (= state56 #b0)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state31 #b00000000)) (not (= state33 #b00000000))) (not (= state41 #b00000000))) (not (= state96 #b0))) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state41 #b00000000))", "negated": true, "atom": "(= state41 #b00000000)"},
+            {"str": "(not (= state33 #b00000000))", "negated": true, "atom": "(= state33 #b00000000)"},
+            {"str": "(not (= state31 #b00000000))", "negated": true, "atom": "(= state31 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state88 #b0)) (= state58 #b0)) (= state48 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state88 #b0)) (= state58 #b0)) (= state46 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state21 #b0000000000000000)) (not (= state96 #b0))) (= state84 #b0)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state70 #b0)) (= state84 #b0)) (= state56 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state31 #b00000000)) (not (= state33 #b00000000))) (not (= state96 #b0))) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state33 #b00000000))", "negated": true, "atom": "(= state33 #b00000000)"},
+            {"str": "(not (= state31 #b00000000))", "negated": true, "atom": "(= state31 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state88 #b0)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state88 #b0)", "negated": false, "atom": "(= state88 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state35 #b00000000)) (not (= state96 #b0))) (= state68 #b0)) (= state84 #b0)) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state68 #b0)", "negated": false, "atom": "(= state68 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state35 #b00000000))", "negated": true, "atom": "(= state35 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state84 #b0)) (= state58 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state84 #b0)) (= state56 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state23 #b0000000000000000)) (not (= state76 #b0))) (not (= state96 #b0))) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state23 #b0000000000000000))", "negated": true, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state33 #b00000000))) (not (= state54 #b0))) (not (= state96 #b0))) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state33 #b00000000))", "negated": true, "atom": "(= state33 #b00000000)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state25 #b0000000000000000)) (not (= state96 #b0))) (= state62 #b0)) (= state52 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state25 #b0000000000000000))", "negated": true, "atom": "(= state25 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state21 #b0000000000000000)) (not (= state96 #b0))) (= state62 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(not (= state21 #b0000000000000000))", "negated": true, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state25 #b0000000000000000)) (not (= state29 #b00000000))) (not (= state54 #b0))) (not (= state96 #b0))) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"},
+            {"str": "(not (= state25 #b0000000000000000))", "negated": true, "atom": "(= state25 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state27 #b0000000000000000)) (not (= state29 #b00000000))) (not (= state54 #b0))) (not (= state96 #b0))) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"},
+            {"str": "(not (= state27 #b0000000000000000))", "negated": true, "atom": "(= state27 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state25 #b0000000000000000)) (not (= state76 #b0))) (not (= state96 #b0))) (= state52 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state25 #b0000000000000000))", "negated": true, "atom": "(= state25 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state27 #b0000000000000000)) (not (= state29 #b00000000))) (not (= state96 #b0))) (= state23 #b0000000000000000)) (= state74 #b0)) (= state52 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state23 #b0000000000000000)", "negated": false, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state74 #b0)", "negated": false, "atom": "(= state74 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"},
+            {"str": "(not (= state27 #b0000000000000000))", "negated": true, "atom": "(= state27 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state23 #b0000000000000000)) (not (= state29 #b00000000))) (not (= state54 #b0))) (not (= state96 #b0))) (= state58 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state23 #b0000000000000000))", "negated": true, "atom": "(= state23 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state29 #b00000000)) (not (= state54 #b0))) (not (= state96 #b0))) (= state21 #b0000000000000000)) (= state58 #b0)) (= state39 #b00000000))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state21 #b0000000000000000)", "negated": false, "atom": "(= state21 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state54 #b0))", "negated": true, "atom": "(= state54 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state56 #b0))",
+          "num_literals": 3,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state56 #b0)", "negated": false, "atom": "(= state56 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state72 #b0)) (= state39 #b00000000)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state72 #b0)", "negated": false, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state70 #b0)) (= state50 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state72 #b0)) (= state39 #b00000000)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state72 #b0)", "negated": false, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state70 #b0)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state19 #b0000000000000000)) (= state70 #b0)) (= state46 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state29 #b00000000)) (not (= state96 #b0))) (= state72 #b0)) (= state39 #b00000000))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state72 #b0)", "negated": false, "atom": "(= state72 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state25 #b0000000000000000)) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state66 #b0)) (= state70 #b0)) (= state52 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state25 #b0000000000000000))", "negated": true, "atom": "(= state25 #b0000000000000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state29 #b00000000)) (not (= state76 #b0))) (not (= state96 #b0))) (= state70 #b0)) (= state90 #b0)) (= state52 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state82 #b0)) (not (= state84 #b0))) (not (= state96 #b0))) (= state62 #b0)) (= state52 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(not (= state82 #b0))", "negated": true, "atom": "(= state82 #b0)"},
+            {"str": "(not (= state84 #b0))", "negated": true, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state29 #b00000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state90 #b0)) (= state39 #b00000000)) (= state52 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state70 #b0)) (not (= state96 #b0))) (= state39 #b00000000)) (= state50 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state50 #b0)", "negated": false, "atom": "(= state50 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (or (not (= state76 #b0)) (not (= state96 #b0))) (= state19 #b0000000000000000)) (= state58 #b0)) (= state39 #b00000000)) (= state48 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 7,
+          "literals": [
+            {"str": "(= state19 #b0000000000000000)", "negated": false, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state76 #b0))", "negated": true, "atom": "(= state76 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state90 #b0)) (= state62 #b0)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state62 #b0)", "negated": false, "atom": "(= state62 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state84 #b0)) (= state90 #b0)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state29 #b00000000)) (not (= state70 #b0))) (not (= state96 #b0))) (= state58 #b0)) (= state39 #b00000000)) (= state52 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state39 #b00000000)", "negated": false, "atom": "(= state39 #b00000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state58 #b0)", "negated": false, "atom": "(= state58 #b0)"},
+            {"str": "(not (= state70 #b0))", "negated": true, "atom": "(= state70 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state29 #b00000000))", "negated": true, "atom": "(= state29 #b00000000)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (not (= state96 #b0)) (= state66 #b0)) (= state84 #b0)) (= state48 #b0))",
+          "num_literals": 4,
+          "literals": [
+            {"str": "(= state48 #b0)", "negated": false, "atom": "(= state48 #b0)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (or (not (= state19 #b0000000000000000)) (not (= state96 #b0))) (= state66 #b0)) (= state78 #b0)) (= state84 #b0)) (= state46 #b0))",
+          "num_literals": 6,
+          "literals": [
+            {"str": "(= state46 #b0)", "negated": false, "atom": "(= state46 #b0)"},
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state78 #b0)", "negated": false, "atom": "(= state78 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state19 #b0000000000000000))", "negated": true, "atom": "(= state19 #b0000000000000000)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state96 #b0)) (= state66 #b0)) (= state70 #b0)) (= state78 #b0)) (= state84 #b0))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state66 #b0)", "negated": false, "atom": "(= state66 #b0)"},
+            {"str": "(= state70 #b0)", "negated": false, "atom": "(= state70 #b0)"},
+            {"str": "(= state78 #b0)", "negated": false, "atom": "(= state78 #b0)"},
+            {"str": "(= state84 #b0)", "negated": false, "atom": "(= state84 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"}
+          ]
+        },
+        {
+          "clause_str": "(or (or (or (or (not (= state25 #b0000000000000000)) (not (= state96 #b0))) (= state90 #b0)) (= state52 #b0)) (= state27 #b0000000000000000))",
+          "num_literals": 5,
+          "literals": [
+            {"str": "(= state27 #b0000000000000000)", "negated": false, "atom": "(= state27 #b0000000000000000)"},
+            {"str": "(= state52 #b0)", "negated": false, "atom": "(= state52 #b0)"},
+            {"str": "(= state90 #b0)", "negated": false, "atom": "(= state90 #b0)"},
+            {"str": "(not (= state96 #b0))", "negated": true, "atom": "(= state96 #b0)"},
+            {"str": "(not (= state25 #b0000000000000000))", "negated": true, "atom": "(= state25 #b0000000000000000)"}
+          ]
+        }
+      ]
+    }
+  ],
+  "all_atoms": [
+    "(= state10 #b0000000000000000)",
+    "(= state12 #b0000000000000000)",
+    "(= state15 #b00000000)",
+    "(= state17 #b00000000)",
+    "(= state19 #b0000000000000000)",
+    "(= state21 #b0000000000000000)",
+    "(= state23 #b0000000000000000)",
+    "(= state25 #b0000000000000000)",
+    "(= state27 #b0000000000000000)",
+    "(= state29 #b00000000)",
+    "(= state31 #b00000000)",
+    "(= state33 #b00000000)",
+    "(= state35 #b00000000)",
+    "(= state37 #b00000000)",
+    "(= state39 #b00000000)",
+    "(= state41 #b00000000)",
+    "(= state46 #b0)",
+    "(= state48 #b0)",
+    "(= state50 #b0)",
+    "(= state52 #b0)",
+    "(= state54 #b0)",
+    "(= state56 #b0)",
+    "(= state58 #b0)",
+    "(= state60 #b0)",
+    "(= state62 #b0)",
+    "(= state64 #b0)",
+    "(= state66 #b0)",
+    "(= state68 #b0)",
+    "(= state70 #b0)",
+    "(= state72 #b0)",
+    "(= state74 #b0)",
+    "(= state76 #b0)",
+    "(= state78 #b0)",
+    "(= state8 #b0000000000000000)",
+    "(= state80 #b0)",
+    "(= state82 #b0)",
+    "(= state84 #b0)",
+    "(= state86 #b0)",
+    "(= state88 #b0)",
+    "(= state90 #b0)",
+    "(= state94 #b0)",
+    "(= state96 #b0)"
+  ],
+  "atom_stats": {
+    "(= state10 #b0000000000000000)": {"count": 1, "pos_count": 1, "neg_count": 0, "min_frame": 10, "max_frame": 10},
+    "(= state12 #b0000000000000000)": {"count": 1, "pos_count": 1, "neg_count": 0, "min_frame": 10, "max_frame": 10},
+    "(= state15 #b00000000)": {"count": 1, "pos_count": 1, "neg_count": 0, "min_frame": 10, "max_frame": 10},
+    "(= state17 #b00000000)": {"count": 7, "pos_count": 1, "neg_count": 6, "min_frame": 6, "max_frame": 10},
+    "(= state19 #b0000000000000000)": {"count": 33, "pos_count": 27, "neg_count": 6, "min_frame": 1, "max_frame": 10},
+    "(= state21 #b0000000000000000)": {"count": 40, "pos_count": 24, "neg_count": 16, "min_frame": 1, "max_frame": 10},
+    "(= state23 #b0000000000000000)": {"count": 23, "pos_count": 14, "neg_count": 9, "min_frame": 1, "max_frame": 10},
+    "(= state25 #b0000000000000000)": {"count": 14, "pos_count": 6, "neg_count": 8, "min_frame": 7, "max_frame": 10},
+    "(= state27 #b0000000000000000)": {"count": 25, "pos_count": 20, "neg_count": 5, "min_frame": 7, "max_frame": 10},
+    "(= state29 #b00000000)": {"count": 53, "pos_count": 1, "neg_count": 52, "min_frame": 1, "max_frame": 10},
+    "(= state31 #b00000000)": {"count": 10, "pos_count": 4, "neg_count": 6, "min_frame": 6, "max_frame": 10},
+    "(= state33 #b00000000)": {"count": 19, "pos_count": 11, "neg_count": 8, "min_frame": 5, "max_frame": 10},
+    "(= state35 #b00000000)": {"count": 4, "pos_count": 1, "neg_count": 3, "min_frame": 1, "max_frame": 10},
+    "(= state37 #b00000000)": {"count": 5, "pos_count": 1, "neg_count": 4, "min_frame": 2, "max_frame": 10},
+    "(= state39 #b00000000)": {"count": 45, "pos_count": 38, "neg_count": 7, "min_frame": 5, "max_frame": 10},
+    "(= state41 #b00000000)": {"count": 24, "pos_count": 4, "neg_count": 20, "min_frame": 1, "max_frame": 10},
+    "(= state46 #b0)": {"count": 36, "pos_count": 35, "neg_count": 1, "min_frame": 1, "max_frame": 10},
+    "(= state48 #b0)": {"count": 37, "pos_count": 37, "neg_count": 0, "min_frame": 5, "max_frame": 10},
+    "(= state50 #b0)": {"count": 17, "pos_count": 16, "neg_count": 1, "min_frame": 1, "max_frame": 10},
+    "(= state52 #b0)": {"count": 59, "pos_count": 59, "neg_count": 0, "min_frame": 6, "max_frame": 10},
+    "(= state54 #b0)": {"count": 15, "pos_count": 1, "neg_count": 14, "min_frame": 1, "max_frame": 10},
+    "(= state56 #b0)": {"count": 17, "pos_count": 17, "neg_count": 0, "min_frame": 2, "max_frame": 10},
+    "(= state58 #b0)": {"count": 48, "pos_count": 48, "neg_count": 0, "min_frame": 3, "max_frame": 10},
+    "(= state60 #b0)": {"count": 10, "pos_count": 10, "neg_count": 0, "min_frame": 1, "max_frame": 10},
+    "(= state62 #b0)": {"count": 12, "pos_count": 12, "neg_count": 0, "min_frame": 3, "max_frame": 10},
+    "(= state64 #b0)": {"count": 11, "pos_count": 4, "neg_count": 7, "min_frame": 1, "max_frame": 10},
+    "(= state66 #b0)": {"count": 21, "pos_count": 20, "neg_count": 1, "min_frame": 3, "max_frame": 10},
+    "(= state68 #b0)": {"count": 13, "pos_count": 13, "neg_count": 0, "min_frame": 6, "max_frame": 10},
+    "(= state70 #b0)": {"count": 42, "pos_count": 24, "neg_count": 18, "min_frame": 4, "max_frame": 10},
+    "(= state72 #b0)": {"count": 17, "pos_count": 10, "neg_count": 7, "min_frame": 5, "max_frame": 10},
+    "(= state74 #b0)": {"count": 10, "pos_count": 10, "neg_count": 0, "min_frame": 7, "max_frame": 10},
+    "(= state76 #b0)": {"count": 15, "pos_count": 1, "neg_count": 14, "min_frame": 6, "max_frame": 10},
+    "(= state78 #b0)": {"count": 8, "pos_count": 7, "neg_count": 1, "min_frame": 8, "max_frame": 10},
+    "(= state8 #b0000000000000000)": {"count": 1, "pos_count": 1, "neg_count": 0, "min_frame": 10, "max_frame": 10},
+    "(= state80 #b0)": {"count": 1, "pos_count": 1, "neg_count": 0, "min_frame": 1, "max_frame": 1},
+    "(= state82 #b0)": {"count": 2, "pos_count": 1, "neg_count": 1, "min_frame": 4, "max_frame": 10},
+    "(= state84 #b0)": {"count": 28, "pos_count": 27, "neg_count": 1, "min_frame": 3, "max_frame": 10},
+    "(= state86 #b0)": {"count": 7, "pos_count": 6, "neg_count": 1, "min_frame": 1, "max_frame": 10},
+    "(= state88 #b0)": {"count": 26, "pos_count": 21, "neg_count": 5, "min_frame": 6, "max_frame": 10},
+    "(= state90 #b0)": {"count": 27, "pos_count": 27, "neg_count": 0, "min_frame": 6, "max_frame": 10},
+    "(= state94 #b0)": {"count": 5, "pos_count": 5, "neg_count": 0, "min_frame": 9, "max_frame": 10},
+    "(= state96 #b0)": {"count": 269, "pos_count": 0, "neg_count": 269, "min_frame": 1, "max_frame": 10}
+  }
+}

@@ -1,0 +1,13 @@
+[
+  {"predicate_type": "ult", "operands": {"op1": "state12", "op2": "state13"}, "comment": "x < y (loop condition)"},
+  {"predicate_type": "eq",  "operands": {"op1": "state12", "op2": "state14"}, "comment": "x == z (property negation)"},
+  {"predicate_type": "ult", "operands": {"op1": "state12", "op2": "state14"}, "comment": "x < z"},
+  {"predicate_type": "ult", "operands": {"op1": "state14", "op2": "state12"}, "comment": "z < x"},
+  {"predicate_type": "ult", "operands": {"op1": "state12", "op2": "5000000"}, "comment": "x < 5000000 (threshold)"},
+  {"predicate_type": "ult", "operands": {"op1": "state14", "op2": "5000000"}, "comment": "z < 5000000"},
+  {"predicate_type": "eq",  "operands": {"op1": "state14", "op2": "5000000"}, "comment": "z == 5000000 (KEY: z is constant)"},
+  {"predicate_type": "eq",  "operands": {"op1": "state13", "op2": "10000000"}, "comment": "y == 10000000 (KEY: y is constant)"},
+  {"predicate_type": "eq",  "operands": {"op1": "state12", "op2": "0"},      "comment": "x == 0"},
+  {"predicate_type": "ule", "operands": {"op1": "state12", "op2": "5000000"}, "comment": "x <= 5000000"},
+  {"predicate_type": "ule", "operands": {"op1": "state12", "op2": "state14"}, "comment": "x <= z"}
+]

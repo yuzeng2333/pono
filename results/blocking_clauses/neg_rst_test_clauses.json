@@ -1,0 +1,19 @@
+{
+  "engine": "ic3ia",
+  "num_frames": 2,
+  "frames": [
+    {
+      "level": 1,
+      "num_clauses": 0,
+      "clauses": [
+
+      ]
+    }
+  ],
+  "all_atoms": [
+
+  ],
+  "atom_stats": {
+
+  }
+}

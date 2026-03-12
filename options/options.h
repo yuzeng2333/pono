@@ -146,7 +146,6 @@ class PonoOptions
         ic3_gen_max_iter_(default_ic3_gen_max_iter_),
         mbic3_indgen_mode(default_mbic3_indgen_mode),
         ic3_functional_preimage_(default_ic3_functional_preimage_),
-        ic3_unsatcore_gen_(default_ic3_unsatcore_gen_),
         ic3ia_reduce_preds_(default_ic3ia_reduce_preds_),
         ic3ia_track_important_vars_(default_ic3ia_track_important_vars_),
         ic3ia_sim_cex_(default_ic3ia_sim_cex_),
@@ -263,7 +262,6 @@ class PonoOptions
                                     ///< means unbounded
   unsigned long mbic3_indgen_mode;  ///< inductive generalization mode [0,2]
   bool ic3_functional_preimage_;    ///< functional preimage in IC3
-  bool ic3_unsatcore_gen_;  ///< generalize a cube during relative inductiveness
                             ///< check with unsatcore
   bool ic3ia_reduce_preds_;  ///< reduce predicates with unsatcore in IC3IA
   bool ic3ia_track_important_vars_;  ///< prioritize predicates with marked
@@ -271,6 +269,9 @@ class PonoOptions
   bool ic3ia_sim_cex_;      ///< simulate abstract cex during IC3IA's refinement
   std::string ic3ia_predicate_file_;  ///< JSON file with initial predicates for IC3IA
   bool ic3ia_skip_init_preds_;  ///< skip automatic predicate extraction from init/prop
+  std::string dump_blocking_clauses_;  ///< dump IC3 blocking clauses to JSON
+  unsigned long simulate_steps_;  ///< number of steps for SAT-based simulation (0=disabled)
+  std::string simulate_output_;  ///< output JSON file for simulation trace
   bool ic3sa_func_refine_;  ///< try functional unrolling in refinement
   std::string profiling_log_filename_;
   bool pseudo_init_prop_;  ///< replace init and prop with boolean state vars
@@ -424,7 +425,6 @@ class PonoOptions
   static const unsigned int default_ic3_gen_max_iter_ = 2;
   static const unsigned int default_mbic3_indgen_mode = 0;
   static const bool default_ic3_functional_preimage_ = false;
-  static const bool default_ic3_unsatcore_gen_ = true;
   static const bool default_ic3ia_reduce_preds_ = true;
   static const bool default_ic3ia_track_important_vars_ = true;
   static const bool default_ic3ia_sim_cex_ = true;
