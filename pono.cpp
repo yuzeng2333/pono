@@ -301,6 +301,15 @@ ProverResult check_prop(PonoOptions pono_options,
   }
   assert(prover);
 
+  // Enable incremental dump if requested (writes frames to disk after each IC3 step)
+  if (pono_options.incremental_dump_ && !pono_options.dump_blocking_clauses_.empty()) {
+    auto ic3_prover = std::dynamic_pointer_cast<IC3Base>(prover);
+    if (ic3_prover) {
+      ic3_prover->set_incremental_dump(pono_options.dump_blocking_clauses_,
+                                       to_string(pono_options.engine_));
+    }
+  }
+
   ProverResult r;
   if (pono_options.engine_ == MSAT_IC3IA) {
     // HACK MSAT_IC3IA does not support check_until

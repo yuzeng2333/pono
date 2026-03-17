@@ -192,6 +192,12 @@ class IC3Base : public SafetyProver
   void dump_frames_to_json(const std::string & filename,
                            const std::string & engine_name) const;
 
+  /** Enable incremental dumping: after each IC3 step, dump frames to this file.
+   *  This ensures data is on disk even if pono is force-killed.
+   */
+  void set_incremental_dump(const std::string & filename,
+                            const std::string & engine_name);
+
  protected:
   bool compute_witness() override;
 
@@ -610,6 +616,10 @@ class IC3Base : public SafetyProver
    *  already has semantics assigned at the base context level
    */
   virtual bool is_global_label(const smt::Term & l) const;
+
+  // Incremental dump settings
+  std::string incremental_dump_file_;
+  std::string incremental_dump_engine_;
 
   /** Negates a term by stripping the leading Not if it's there,
    ** or applying Not if the term is not already negated.

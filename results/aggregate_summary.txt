@@ -1,0 +1,116 @@
+======================================================================
+AGGREGATE PREDICATE PATTERN ANALYSIS ACROSS BENCHMARKS
+======================================================================
+
+Total benchmarks: 9
+Benchmarks with blocking clauses: 6
+
+--- Prover Results ---
+  TRUE: 3
+  FALSE: 1
+  TIMEOUT: 2
+  ERROR: 3
+
+--- Overall Counts ---
+  Total predicate atoms: 141
+  Total blocking clauses: 408
+  Total frames: 65
+  Avg atoms per benchmark: 23.5
+  Avg clauses per benchmark: 68.0
+  Avg frames per benchmark: 10.8
+  Avg clause size: 3.43
+  Avg atom frame span: 5.55
+
+--- Predicate Type Distribution ---
+  equality: 136 (96.5%)
+  comparison: 5 (3.5%)
+
+--- Polarity Distribution ---
+  positive_only: 42 (29.8%)
+  negative_only: 7 (5.0%)
+  mixed: 92 (65.2%)
+
+--- Clause Size Distribution ---
+  size 1: 18 clauses
+  size 2: 122 clauses
+  size 3: 73 clauses
+  size 4: 26 clauses
+  size 5: 24 clauses
+  size 6: 27 clauses
+  size 7: 30 clauses
+  size 8: 23 clauses
+  size 9: 18 clauses
+  size 10: 6 clauses
+  size 11: 5 clauses
+  size 12: 2 clauses
+  size 13: 2 clauses
+  size 14: 2 clauses
+  size 15: 1 clauses
+  size 16: 2 clauses
+  size 17: 1 clauses
+  size 18: 1 clauses
+  size 19: 1 clauses
+  size 20: 1 clauses
+  size 21: 1 clauses
+  size 22: 1 clauses
+  size 23: 1 clauses
+  size 25: 1 clauses
+  size 26: 2 clauses
+  size 27: 1 clauses
+  size 29: 2 clauses
+  size 30: 1 clauses
+  size 31: 1 clauses
+  size 32: 1 clauses
+  size 33: 1 clauses
+  size 34: 1 clauses
+  size 35: 1 clauses
+  size 36: 1 clauses
+  size 37: 1 clauses
+  size 38: 1 clauses
+  size 39: 1 clauses
+  size 40: 1 clauses
+  size 41: 1 clauses
+  size 42: 1 clauses
+  size 43: 1 clauses
+
+--- Frame Progression ---
+  Monotonic: 2
+  Non-monotonic: 4
+
+--- Waveform Predicate Patterns (simulation) ---
+  Benchmarks with waveform analysis: 5
+  phased: 83 (58.9%)
+  always_true: 26 (18.4%)
+  periodic_p8: 23 (16.3%)
+  monotonic_falling: 5 (3.5%)
+  always_false: 2 (1.4%)
+  unresolvable: 1 (0.7%)
+  monotonic_rising: 1 (0.7%)
+
+  Interpretation:
+    always_true   = invariant predicate (holds on all reachable states)
+    always_false  = blocks unreachable regions
+    monotonic_*   = initialization/convergence predicate
+    periodic_*    = cyclic state behavior
+    phased/mixed  = state-dependent dynamic predicate
+    unresolvable  = predicate uses variables not in simulation trace
+
+======================================================================
+PER-BENCHMARK SUMMARY
+======================================================================
+
+Benchmark                                Result    Atoms  Clauses  Frames  Mono    Time
+--------------------------------------------------------------------------------
+anderson.2.prop1-func-interl             TIMEOUT      28      244       6     N  610.1s
+array_lt200                              ERROR         -        -       -     -    0.2s
+constarrfalse                            ERROR         -        -       -     -    0.1s
+constarrtest                             ERROR         -        -       -     -    0.0s
+int_win                                  TRUE          4        3       3     N    0.1s
+neg_rst_test                             FALSE         0        0       1     Y    0.2s
+uv_example                               TRUE          1        1       2     Y    0.3s
+uvw_example                              TRUE         23       55      10     N    0.5s
+xp2                                      TIMEOUT      85      105      43     N  610.2s
+
+======================================================================
+END OF AGGREGATE ANALYSIS
+======================================================================

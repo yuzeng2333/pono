@@ -1,0 +1,481 @@
+======================================================================
+AGGREGATE PREDICATE PATTERN ANALYSIS ACROSS BENCHMARKS
+======================================================================
+
+Total benchmarks: 339
+Benchmarks with blocking clauses: 208
+
+--- Prover Results ---
+  TRUE: 14
+  FALSE: 1
+  UNKNOWN: 8
+  TIMEOUT: 139
+  ERROR: 98
+
+--- Overall Counts ---
+  Total predicate atoms: 2869
+  Total blocking clauses: 9981
+  Total frames: 921
+  Avg atoms per benchmark: 13.8
+  Avg clauses per benchmark: 48.0
+  Avg frames per benchmark: 4.4
+  Avg clause size: 2.37
+  Avg atom frame span: 2.40
+
+--- Predicate Type Distribution ---
+  equality: 2752 (95.9%)
+  comparison: 117 (4.1%)
+
+--- Polarity Distribution ---
+  positive_only: 1125 (39.2%)
+  negative_only: 521 (18.2%)
+  mixed: 1223 (42.6%)
+
+--- Clause Size Distribution ---
+  size 1: 800 clauses
+  size 2: 2064 clauses
+  size 3: 1663 clauses
+  size 4: 1318 clauses
+  size 5: 1175 clauses
+  size 6: 330 clauses
+  size 7: 273 clauses
+  size 8: 228 clauses
+  size 9: 175 clauses
+  size 10: 147 clauses
+  size 11: 151 clauses
+  size 12: 184 clauses
+  size 13: 280 clauses
+  size 14: 184 clauses
+  size 15: 139 clauses
+  size 16: 85 clauses
+  size 17: 101 clauses
+  size 18: 80 clauses
+  size 19: 78 clauses
+  size 20: 70 clauses
+  size 21: 62 clauses
+  size 22: 53 clauses
+  size 23: 55 clauses
+  size 24: 44 clauses
+  size 25: 34 clauses
+  size 26: 22 clauses
+  size 27: 23 clauses
+  size 28: 19 clauses
+  size 29: 15 clauses
+  size 30: 13 clauses
+  size 31: 13 clauses
+  size 32: 17 clauses
+  size 33: 12 clauses
+  size 34: 10 clauses
+  size 35: 7 clauses
+  size 36: 9 clauses
+  size 37: 6 clauses
+  size 38: 9 clauses
+  size 39: 5 clauses
+  size 40: 5 clauses
+  size 41: 2 clauses
+  size 42: 4 clauses
+  size 43: 3 clauses
+  size 45: 1 clauses
+  size 46: 2 clauses
+  size 47: 1 clauses
+  size 53: 5 clauses
+  size 54: 4 clauses
+  size 56: 1 clauses
+
+--- Frame Progression ---
+  Monotonic: 69
+  Non-monotonic: 139
+
+--- Waveform Predicate Patterns (simulation) ---
+  Benchmarks with waveform analysis: 143
+  always_true: 1684 (62.8%)
+  phased: 316 (11.8%)
+  monotonic_falling: 240 (9.0%)
+  unresolvable: 135 (5.0%)
+  monotonic_rising: 76 (2.8%)
+  always_false: 68 (2.5%)
+  quasi_periodic_p1.0: 35 (1.3%)
+  periodic_p8: 23 (0.9%)
+  mixed: 22 (0.8%)
+  quasi_periodic_p32.0: 21 (0.8%)
+  periodic_p2: 12 (0.4%)
+  quasi_periodic_p2.0: 8 (0.3%)
+  periodic_p3: 4 (0.1%)
+  quasi_periodic_p3.0: 4 (0.1%)
+  quasi_periodic_p2.3: 4 (0.1%)
+  quasi_periodic_p1.5: 3 (0.1%)
+  quasi_periodic_p1.7: 3 (0.1%)
+  quasi_periodic_p3.7: 3 (0.1%)
+  quasi_periodic_p5.7: 3 (0.1%)
+  quasi_periodic_p1.3: 2 (0.1%)
+  quasi_periodic_p1.9: 2 (0.1%)
+  quasi_periodic_p3.4: 1 (0.0%)
+  quasi_periodic_p1.8: 1 (0.0%)
+  quasi_periodic_p165.0: 1 (0.0%)
+  quasi_periodic_p1.4: 1 (0.0%)
+  quasi_periodic_p165.7: 1 (0.0%)
+  quasi_periodic_p7.3: 1 (0.0%)
+  quasi_periodic_p3.8: 1 (0.0%)
+  quasi_periodic_p6.3: 1 (0.0%)
+  quasi_periodic_p1.2: 1 (0.0%)
+  quasi_periodic_p1.1: 1 (0.0%)
+  quasi_periodic_p5.0: 1 (0.0%)
+  quasi_periodic_p4.3: 1 (0.0%)
+
+  Interpretation:
+    always_true   = invariant predicate (holds on all reachable states)
+    always_false  = blocks unreachable regions
+    monotonic_*   = initialization/convergence predicate
+    periodic_*    = cyclic state behavior
+    phased/mixed  = state-dependent dynamic predicate
+    unresolvable  = predicate uses variables not in simulation trace
+
+======================================================================
+PER-BENCHMARK SUMMARY
+======================================================================
+
+Benchmark                                Result    Atoms  Clauses  Frames  Mono    Time
+--------------------------------------------------------------------------------
+77.c                                     CACHED        2        2       2     Y    0.0s
+AllInterval-020                          TIMEOUT       0        0       1     Y 1860.2s
+Float_div.i.p+cfa-reducer                CACHED        6        5       4     N    0.0s
+ILA_AES_LOAD_problem                     CACHED        3        3       3     N    0.0s
+ILA_Flute_BGEU_problem                   ERROR         -        -       -     -  460.0s
+ILA_Flute_BLT_problem                    ERROR         -        -       -     -  445.0s
+ILA_Flute_SRAI_problem                   ERROR         -        -       -     -  464.8s
+ILA_Flute_XORI_sanity                    ERROR         -        -       -     -  759.5s
+ILA_Piccolo_ADD_problem                  ERROR         -        -       -     -  190.9s
+ILA_Piccolo_BGEU_problem                 ERROR         -        -       -     -  187.4s
+ILA_Piccolo_LUI_sanity                   ERROR         -        -       -     -  215.2s
+ILA_Piccolo_SUB_problem                  ERROR         -        -       -     -  226.5s
+ILA_Ridecore_BNE_sanity                  ERROR         -        -       -     -  251.9s
+ILA_Ridecore_JAL_problem                 ERROR         -        -       -     -  457.0s
+ILA_Ridecore_SLL_problem                 ERROR         -        -       -     -  260.1s
+ILA_Rocket_AND_problem                   ERROR         -        -       -     -  972.8s
+Mono6_1                                  CACHED        6        5       4     N    0.0s
+NO_04                                    ERROR        33       63       5     N  678.9s
+Problem01_label05                        TIMEOUT       -        -       -     - 1860.7s
+Problem01_label22                        TIMEOUT       -        -       -     - 1860.7s
+Problem02_label43                        CACHED        5        3       3     N    0.0s
+Problem03_label05                        TIMEOUT       -        -       -     - 1860.6s
+Problem03_label32                        TIMEOUT       -        -       -     - 1862.0s
+Problem05_label42+token_ring.04.cil-2    ERROR         -        -       -     -  720.3s
+Problem05_label43+token_ring.03.cil-1    ERROR         -        -       -     -  558.2s
+Problem05_label45+token_ring.13.cil-1    ERROR         -        -       -     -  666.3s
+Problem05_label47+token_ring.13.cil-2    ERROR         -        -       -     -  595.1s
+Problem05_label49+token_ring.06.cil-2    ERROR         -        -       -     - 1164.1s
+Problem10_label21                        ERROR         -        -       -     -  407.3s
+Problem10_label27                        TIMEOUT       2        1       2     N 1860.7s
+Problem11_label08                        TIMEOUT       0        0       1     Y 1860.4s
+Problem13_label23                        ERROR         -        -       -     -  836.9s
+Problem13_label56                        ERROR         -        -       -     -  872.3s
+Problem13_label59                        ERROR         -        -       -     -  925.9s
+Problem14_label18                        ERROR         -        -       -     -  215.7s
+Problem14_label52                        ERROR         -        -       -     -  159.1s
+Problem14_label53                        ERROR         -        -       -     -  155.5s
+Problem14_label54                        ERROR         -        -       -     -  482.2s
+Problem15_label35                        ERROR         -        -       -     -  360.4s
+Problem15_label37                        ERROR         -        -       -     - 1317.6s
+Problem15_label46                        ERROR         -        -       -     -  279.8s
+Problem15_label58                        ERROR         -        -       -     - 1185.1s
+Problem15_label58                        TIMEOUT       -        -       -     - 1860.9s
+Problem17_label22                        ERROR         -        -       -     -  211.3s
+Problem17_label44                        ERROR         -        -       -     -  258.4s
+Problem19_label01                        ERROR         -        -       -     -  495.1s
+a16-p1                                   TIMEOUT       -        -       -     - 1860.4s
+a16-p114                                 TIMEOUT       -        -       -     - 1860.4s
+a16-p13                                  TIMEOUT       -        -       -     - 1860.4s
+a16-p32                                  TIMEOUT       -        -       -     - 1860.4s
+a16-p38                                  TIMEOUT       -        -       -     - 1860.4s
+a16-p47                                  TIMEOUT       -        -       -     - 1860.4s
+a16-p75                                  TIMEOUT       -        -       -     - 1860.4s
+a16-p76                                  TIMEOUT       -        -       -     - 1860.4s
+a16-p89                                  TIMEOUT       -        -       -     - 2127.0s
+a19-p13                                  TIMEOUT       -        -       -     - 1983.4s
+anderson.2.prop1-func-interl             CACHED       28      244       6     N    0.0s
+arbitrated_top_n2_w64_d32_e0             TIMEOUT       0        0       1     Y 1860.3s
+arbitrated_top_n2_w8_d128_e0             TIMEOUT       0        0       1     Y 1860.2s
+arbitrated_top_n2_w8_d32_e0              TIMEOUT       5        3       2     N 1860.7s
+arbitrated_top_n3_w128_d16_e0            TIMEOUT       0        0       1     Y 1860.3s
+arbitrated_top_n3_w128_d8_e0             ERROR         0        0       1     Y 1083.6s
+arbitrated_top_n3_w16_d128_e0            TIMEOUT       0        0       1     Y 1860.2s
+arbitrated_top_n3_w32_d128_e0            TIMEOUT       0        0       1     Y 1860.3s
+arbitrated_top_n3_w64_d8_e0              TIMEOUT       0        0       1     Y 1862.0s
+arbitrated_top_n3_w8_d128_e0             TIMEOUT       0        0       1     Y 1860.3s
+arbitrated_top_n3_w8_d16_e0              TIMEOUT       0        0       1     Y 1860.3s
+arbitrated_top_n3_w8_d32_e0              ERROR         0        0       1     Y 1661.8s
+arbitrated_top_n4_w128_d128_e0           TIMEOUT       0        0       1     Y 1860.3s
+arbitrated_top_n4_w128_d16_e0            TIMEOUT       3        2       2     N 1860.6s
+arbitrated_top_n4_w128_d8_e0             TIMEOUT       0        0       1     Y 1822.1s
+arbitrated_top_n4_w16_d32_e0             TIMEOUT     111      141       2     N 1860.7s
+arbitrated_top_n4_w16_d8_e0              TIMEOUT       3        2       2     N 1860.5s
+arbitrated_top_n4_w32_d16_e0             TIMEOUT       3        2       2     N 1860.9s
+arbitrated_top_n4_w64_d128_e0            TIMEOUT       0        0       1     Y 1860.3s
+arbitrated_top_n4_w64_d32_e0             TIMEOUT       0        0       1     Y 1860.9s
+arbitrated_top_n4_w8_d32_e0              TIMEOUT       0        0       1     Y 1860.8s
+arbitrated_top_n5_w16_d64_e0             TIMEOUT       0        0       1     Y 1860.3s
+arbitrated_top_n5_w32_d16_e0             TIMEOUT       0        0       1     Y 1860.9s
+array_lt200                              ERROR         0        0       1     Y    0.2s
+bakery.3.prop1-func-interl               CACHED       26      133       6     N    0.0s
+benchmarks_initial_output_btor2_example  TIMEOUT       -        -       -     - 1860.5s
+benchmarks_initial_output_btor2_example  TIMEOUT       -        -       -     - 1860.5s
+benchmarks_initial_output_btor2_example  TIMEOUT       -        -       -     - 1860.5s
+benchmarks_initial_output_btor2_example  TIMEOUT       -        -       -     - 1860.5s
+benchmarks_output_btor2_example_106_mit  CACHED        3        2       2     N    0.0s
+benchmarks_output_btor2_example_110_mit  TIMEOUT       5        4       4     N 1860.1s
+benchmarks_output_btor2_example_156_mit  TIMEOUT       4        3       2     Y 1860.5s
+benchmarks_output_btor2_example_162_mit  CACHED        3        2       2     N    0.0s
+benchmarks_output_btor2_example_186_mit  TIMEOUT       6        6       4     Y 1887.1s
+benchmarks_output_btor2_example_212_mit  CACHED        9        9       4     N    0.0s
+benchmarks_output_btor2_example_220_mit  CACHED        3        2       2     N    0.0s
+benchmarks_output_btor2_example_227_mit  TIMEOUT       0        0       1     Y 1887.0s
+benchmarks_output_btor2_example_230_mit  TIMEOUT       4        3       3     N 1886.6s
+benchmarks_output_btor2_example_23_mite  TIMEOUT       4        3       2     Y 1874.3s
+benchmarks_output_btor2_example_246_mit  TIMEOUT       4        3       3     N 1884.5s
+benchmarks_output_btor2_example_263_mit  TIMEOUT      18       30       6     Y 1875.4s
+benchmarks_output_btor2_example_291_mit  CACHED        3        2       2     N    0.0s
+benchmarks_output_btor2_example_301_mit  CACHED        3        2       2     N    0.0s
+benchmarks_output_btor2_example_309_mit  ERROR         4        3       2     N 1375.8s
+benchmarks_output_btor2_example_320_mit  TIMEOUT       5        5       2     N 1861.1s
+benchmarks_output_btor2_example_324_mit  TIMEOUT       5        4       4     N 1860.6s
+benchmarks_output_btor2_example_349_mit  TIMEOUT       8        7       4     Y 1860.2s
+benchmarks_output_btor2_example_370_mit  CACHED        8        7       2     Y    0.0s
+benchmarks_output_btor2_example_401_mit  CACHED        3        2       2     N    0.0s
+benchmarks_output_btor2_example_410_mit  TIMEOUT       9        9       6     N 1860.2s
+benchmarks_output_btor2_example_412_mit  CACHED        3        2       2     N    0.0s
+benchmarks_output_btor2_example_437_mit  TIMEOUT       4        3       3     N 1861.1s
+benchmarks_output_btor2_example_470_mit  CACHED        3        2       2     N    0.0s
+benchmarks_output_btor2_example_471_mit  TIMEOUT       4        3       3     N 1860.8s
+benchmarks_output_btor2_example_494_mit  TIMEOUT       6        6       4     N 1860.1s
+benchmarks_output_btor2_example_499_mit  TIMEOUT      14       17       4     N 1860.6s
+benchmarks_output_btor2_example_56_mite  TIMEOUT       4        3       3     N 1861.0s
+benchmarks_output_btor2_example_57_mite  CACHED        3        2       2     N    0.0s
+benchmarks_output_btor2_example_85_mite  CACHED        3        2       2     N    0.0s
+benchmarks_output_btor2_example_96_mite  TIMEOUT       4        3       3     N 1861.3s
+brp2.3.prop3-func-interl                 CACHED       42      278      10     N    0.0s
+cal100                                   TIMEOUT       -        -       -     - 1860.8s
+cal103                                   TIMEOUT       -        -       -     - 1860.8s
+cal122                                   TIMEOUT       -        -       -     - 1860.8s
+cal135                                   TIMEOUT       -        -       -     - 1860.8s
+cal14                                    CACHED        6        3       3     N    0.0s
+cal143                                   TIMEOUT       -        -       -     - 1860.8s
+cal154                                   TIMEOUT       -        -       -     - 1860.8s
+cal157                                   TIMEOUT       -        -       -     - 1861.1s
+cal188                                   TIMEOUT       -        -       -     - 1861.1s
+cal191                                   TIMEOUT       -        -       -     - 1861.1s
+cal206                                   TIMEOUT       -        -       -     - 1861.1s
+cal211                                   TIMEOUT       -        -       -     - 1861.1s
+cal222                                   TIMEOUT       -        -       -     - 1861.2s
+cal28                                    CACHED        9        5       3     N    0.0s
+cal40                                    TIMEOUT       1        1       2     N 1862.6s
+cal42                                    CACHED        3        2       3     N    0.0s
+cal49                                    TRUE          0        0       2     Y 1126.1s
+cal75                                    TRUE         12        9       4     N 1685.1s
+cal76                                    TRUE         10        8       4     N 1149.6s
+cal78                                    TIMEOUT       -        -       -     - 1860.3s
+cal86                                    TIMEOUT       -        -       -     - 1860.3s
+cal90                                    TIMEOUT       -        -       -     - 1860.3s
+circular_pointer_top_w128_d16_e0         ERROR         0        0       1     Y 1704.5s
+circular_pointer_top_w128_d32_e0         ERROR         0        0       1     Y  791.2s
+circular_pointer_top_w128_d8_e0          ERROR         0        0       1     Y 1170.7s
+circular_pointer_top_w32_d16_e0          ERROR         0        0       1     Y 1350.4s
+circular_pointer_top_w64_d16_e0          ERROR         0        0       1     Y 1617.2s
+circular_pointer_top_w8_d16_e0           TIMEOUT       0        0       1     Y 1861.4s
+circular_pointer_top_w8_d32_e0           ERROR         0        0       1     Y  978.2s
+collision.1.prop1-func-interl            CACHED       20       43       7     N    0.0s
+constarrfalse                            ERROR         0        0       1     Y    0.1s
+constarrtest                             ERROR         0        0       1     Y    0.0s
+counter_bit_width_small                  CACHED        9       10       2     N    0.0s
+dblclockfft_butterfly_ck1-p119           CACHED        5        3       3     N    0.0s
+dblclockfft_butterfly_ck1-p131           CACHED       11        7       4     N    0.0s
+dblclockfft_butterfly_ck1-p160           CACHED       42       84      10     N    0.0s
+dblclockfft_butterfly_ck1-p227           CACHED       13       11       4     N    0.0s
+dblclockfft_butterfly_ck1-p428           TIMEOUT      45       63       7     N 1860.2s
+dblclockfft_butterfly_ck1-p46            TRUE          0        0       2     Y   18.5s
+dblclockfft_butterfly_ck2_r0-p229        TIMEOUT      47       69       9     N 1860.2s
+dblclockfft_butterfly_ck2_r0-p83         CACHED        2        2       3     N    0.0s
+dblclockfft_butterfly_ck3_r0-p100        CACHED       19       19       2     N    0.0s
+dblclockfft_butterfly_ck3_r0-p76         TIMEOUT      40       98       7     N 1860.2s
+dblclockfft_butterfly_ck3_r0-p82         CACHED        2        2       3     N    0.0s
+dblclockfft_butterfly_ck3_r1-p125        CACHED       24       37       5     N    0.0s
+dblclockfft_butterfly_ck3_r1-p50         CACHED        5        5       4     N    0.0s
+dblclockfft_butterfly_ck3_r1-p73         CACHED        4        4       3     N    0.0s
+diffeq                                   ERROR         6        6       1     Y 1794.7s
+dspfilters_fastfir_second-p10            TIMEOUT      81      329       6     N 1808.4s
+dspfilters_fastfir_second-p45            CACHED       15       14       3     N    0.0s
+dspfilters_fastfir_second-p50            CACHED       15       14       3     N    0.0s
+elevator_spec2_product25.cil             TIMEOUT       -        -       -     - 1860.5s
+elevator_spec3_product18.cil             ERROR         -        -       -     -  707.0s
+elevator_spec3_product19.cil             UNKNOWN       0        0       1     Y   35.6s
+exit.3.prop1-back-serstep                CACHED       24      205       7     N    0.0s
+fermat1-ll                               TIMEOUT       4        3       1     Y 1860.7s
+fib_05                                   CACHED        8        9       4     N    0.0s
+fib_23                                   CACHED        3        3       3     N    0.0s
+fifo-p0                                  ERROR         0        0       1     Y  533.3s
+gcd_bit_width_large                      CACHED        6        5       2     N    0.0s
+gcd_bit_width_large                      CACHED        6        5       2     N    0.0s
+gen119                                   ERROR         0        0       1     Y  891.2s
+gen18                                    TRUE          0        0       2     Y  109.0s
+gen22                                    TRUE          0        0       2     Y  193.4s
+gen26                                    TRUE          0        0       2     Y  175.5s
+gen56                                    ERROR         0        0       1     Y  789.0s
+gen68                                    TIMEOUT       0        0       1     Y 1861.5s
+gen76                                    TIMEOUT       0        0       1     Y 1861.7s
+gen93                                    ERROR         0        0       1     Y 1033.4s
+gen97                                    TIMEOUT       0        0       1     Y 1861.7s
+geo1-u_valuebound100                     TIMEOUT       5        3       1     Y 1860.6s
+geo2-ll2_unwindbound1                    TIMEOUT       2        1       2     N 1862.0s
+id_build.i.p+nlh-reducer                 TIMEOUT       8        9       4     N 1860.4s
+int_win                                  CACHED        4        3       3     N    0.0s
+jain_4-2                                 ERROR         3        2       3     N 1241.6s
+jm2006.c.i.v+cfa-reducer                 TIMEOUT       1        1       2     N 1861.4s
+level_10                                 ERROR         -        -       -     -  690.7s
+level_16                                 TIMEOUT      48       77      13     N 1858.7s
+level_20                                 ERROR         -        -       -     -  463.2s
+level_27                                 TIMEOUT       1        1       2     N 1805.5s
+level_48                                 TIMEOUT      68       23       6     N 1813.6s
+level_5                                  TIMEOUT      54       90       5     N 1825.9s
+level_66                                 TIMEOUT      16       16       7     N 1824.1s
+level_73                                 ERROR         -        -       -     -  404.2s
+level_90                                 ERROR         -        -       -     -  443.6s
+loopv3                                   CACHED        5        3       4     N    0.0s
+mem_slave_tlm.4.cil                      ERROR         -        -       -     -  106.4s
+microban_1                               CACHED       23      110      13     N    0.0s
+microban_1                               CACHED       23      110      13     N    0.0s
+microban_105                             CACHED       57      104       7     N    0.0s
+microban_110                             TIMEOUT      39      837      11     N 1860.1s
+microban_117                             CACHED       57      148      22     N    0.0s
+microban_118                             CACHED       48      195      13     N    0.0s
+microban_132                             TIMEOUT      43      586      18     N 1837.3s
+microban_136                             CACHED       45      425      17     N    0.0s
+microban_138                             CACHED       46      140       9     N    0.0s
+microban_141_2                           CACHED        3        2       3     N    0.0s
+microban_143_2                           CACHED       66      172      15     N    0.0s
+microban_145                             CACHED       60      154       6     N    0.0s
+microban_148                             CACHED       50      233      13     N    0.0s
+microban_149                             TIMEOUT      48      452      19     N 1833.5s
+microban_154                             ERROR         -        -       -     -  963.7s
+microban_24                              TIMEOUT      29      129      15     N 1901.6s
+microban_33                              TIMEOUT      35      407       9     N 1961.7s
+microban_44                              UNKNOWN       0        0       1     Y    2.0s
+microban_48                              TIMEOUT      35       91      20     N 1940.0s
+microban_64                              TIMEOUT      37      185      19     N 1933.0s
+microban_71                              CACHED       49      134      21     N    0.0s
+microban_77                              TIMEOUT      25       65      19     N 1920.8s
+microban_82                              CACHED       35      362      26     N    0.0s
+microban_85                              CACHED       66      161       8     N    0.0s
+microban_89                              CACHED       44      258      12     N    0.0s
+microban_93                              TIMEOUT      62      143       8     N 1903.9s
+minepump_spec1_product28.cil             CACHED        5        4       3     N    0.0s
+minepump_spec1_product38.cil             CACHED        1        1       2     N    0.0s
+minepump_spec2_product21.cil             CACHED        2        2       3     N    0.0s
+minepump_spec2_product25.cil             CACHED        3        3       4     N    0.0s
+minepump_spec3_product38.cil             CACHED        3        3       3     N    0.0s
+minepump_spec3_product49.cil             TIMEOUT       1        1       2     N 1861.8s
+minepump_spec4_product24.cil             CACHED        2        2       3     N    0.0s
+minepump_spec4_product33.cil             CACHED       10       10       3     N    0.0s
+minepump_spec4_product39.cil             ERROR         2        2       3     N  693.9s
+minepump_spec5_product10.cil             TRUE          0        0       2     Y   14.2s
+mul1                                     TIMEOUT       7        8       1     Y 1860.2s
+neg_rst_test                             FALSE         0        0       1     Y    0.2s
+pals_lcr-var-start-time.6.1.ufo.UNBOUND  TIMEOUT       2        1       2     N 2365.5s
+pals_lcr.3.ufo.BOUNDED-6.pals+Problem12  ERROR         -        -       -     -  314.8s
+pals_lcr.3.ufo.BOUNDED-6.pals+Problem12  ERROR         -        -       -     -  297.4s
+pals_lcr.7.1.ufo.BOUNDED-14.pals+Proble  ERROR         -        -       -     -  339.0s
+pals_opt-floodmax.4.ufo.UNBOUNDED.pals   TIMEOUT       0        0       1     Y 1850.5s
+pals_opt-floodmax.5_overflow.ufo.UNBOUN  TIMEOUT       -        -       -     - 1860.5s
+pc_sfifo_2.cil-2+token_ring.09.cil-1     TIMEOUT       0        0       1     Y 1860.4s
+pc_sfifo_3.cil+token_ring.01.cil-2       TIMEOUT       4        4       2     N 1860.6s
+pc_sfifo_3.cil+token_ring.09.cil-2       TIMEOUT       0        0       1     Y 1860.3s
+pc_sfifo_3.cil+token_ring.10.cil-1       TIMEOUT       1        1       2     N 1860.2s
+pgm_protocol.8.prop6-func-interl         TIMEOUT       -        -       -     - 1860.8s
+ponylink-slaveTXlen-sat                  TIMEOUT       -        -       -     - 1860.3s
+prodbin-ll_unwindbound10                 TIMEOUT       2        1       2     N 1860.2s
+prodbin-ll_unwindbound50                 TIMEOUT       4        3       1     Y 1860.4s
+qspiflash_dualflexpress_divfive-p121     UNKNOWN      33      146       6     N  760.7s
+qspiflash_dualflexpress_divfive-p130     TRUE         33      125      10     N  681.4s
+qspiflash_dualflexpress_divfive-p133     UNKNOWN      34      113       6     N  652.1s
+qspiflash_dualflexpress_divfive-p162     CACHED       34      124       7     N    0.0s
+qspiflash_dualflexpress_divfive-p41      CACHED       35      124       6     N    0.0s
+qspiflash_dualflexpress_divfive-p80      CACHED       34      136       6     N    0.0s
+qspiflash_dualflexpress_divthree-p120    UNKNOWN      36      143       6     N  927.7s
+qspiflash_dualflexpress_divthree-p151    CACHED       34       76       6     N    0.0s
+qspiflash_dualflexpress_divthree-p161    UNKNOWN      38      146       6     N  677.8s
+qspiflash_dualflexpress_divthree-p46     CACHED       34      137       6     N    0.0s
+qspiflash_qflexpress_divfive-p128        CACHED       32      148       5     N    0.0s
+qspiflash_qflexpress_divfive-p20         TRUE          0        0       2     Y  312.4s
+qspiflash_qflexpress_divfive-p39         CACHED       32       99       6     N    0.0s
+qspiflash_qflexpress_divfive-p65         UNKNOWN      34      134       6     N  762.8s
+qspiflash_qflexpress_divfive-p85         UNKNOWN      31      113       6     N  631.0s
+rast-p0                                  TIMEOUT       -        -       -     - 1860.3s
+rast-p12                                 TIMEOUT       -        -       -     - 1860.3s
+rast-p14                                 TIMEOUT       -        -       -     - 1860.2s
+rast-p16                                 TIMEOUT       -        -       -     - 1860.3s
+rast-p17                                 TIMEOUT       -        -       -     - 1860.3s
+rast-p20                                 TIMEOUT       -        -       -     - 1860.2s
+ridecore                                 ERROR         -        -       -     -  439.2s
+rocket_1937                              ERROR         -        -       -     -  362.1s
+shift_register_top_w128_d16_e0           TIMEOUT       5        4       2     N 1861.4s
+shift_register_top_w128_d32_e0           CACHED        5        3       2     N    0.0s
+shift_register_top_w16_d16_e0            TIMEOUT       5        4       2     N 1861.2s
+shift_register_top_w32_d32_e0            TIMEOUT       5        3       2     N 1862.1s
+shift_register_top_w8_d128_e0            TIMEOUT       -        -       -     - 1860.3s
+simple_alu                               CACHED        4        3       3     N    0.0s
+sqrt1-ll_valuebound100                   ERROR         -        -       -     - 1565.5s
+sqrt_Newton_pseudoconstant               TIMEOUT       0        0       1     Y 1845.3s
+stack-p0                                 ERROR         0        0       1     Y  376.5s
+stack-p2                                 ERROR         2        2       1     Y  280.9s
+sumt3                                    ERROR         1        1       2     N  851.0s
+token_ring.12.cil-1                      TIMEOUT       -        -       -     - 2133.8s
+transmitter.10.cil                       ERROR         -        -       -     -  356.9s
+uv_example                               CACHED        1        1       2     Y    0.0s
+uvw_example                              CACHED       23       55      10     N    0.0s
+vis_QF_BV_bcuvis32                       TRUE          0        0       2     Y    6.4s
+vis_QF_BV_vlunc                          TRUE          0        0       2     Y    2.6s
+vis_arrays_am2910_p3                     CACHED       10       17       3     N    0.0s
+xepic_a12                                TIMEOUT       -        -       -     - 1962.0s
+xepic_a17-p0                             TIMEOUT       -        -       -     - 1867.3s
+xepic_a17-p6                             TIMEOUT       -        -       -     - 1867.1s
+xepic_a18-p1                             TIMEOUT       -        -       -     - 1866.0s
+xp2                                      CACHED       85      105      43     N    0.0s
+yosyshq_appnote_123_cv32e40x-p114        ERROR         -        -       -     -  807.5s
+yosyshq_appnote_123_cv32e40x-p129        ERROR         -        -       -     -  149.9s
+yosyshq_appnote_123_cv32e40x-p131        TIMEOUT       -        -       -     - 2046.3s
+yosyshq_appnote_123_cv32e40x-p144        ERROR         -        -       -     -  176.1s
+yosyshq_appnote_123_cv32e40x-p151        ERROR         -        -       -     -  774.8s
+yosyshq_appnote_123_cv32e40x-p161        ERROR         -        -       -     -  146.0s
+yosyshq_appnote_123_cv32e40x-p179        ERROR         -        -       -     -  142.4s
+yosyshq_appnote_123_cv32e40x-p18         ERROR         -        -       -     -  222.1s
+yosyshq_appnote_123_cv32e40x-p189        ERROR         -        -       -     -  806.4s
+yosyshq_appnote_123_cv32e40x-p193        ERROR         -        -       -     -  944.4s
+yosyshq_appnote_123_cv32e40x-p228        ERROR         -        -       -     -  947.0s
+yosyshq_appnote_123_cv32e40x-p256        ERROR         -        -       -     -  145.9s
+yosyshq_appnote_123_cv32e40x-p312        ERROR         -        -       -     -  155.7s
+yosyshq_appnote_123_cv32e40x-p318        ERROR         -        -       -     -  122.7s
+yosyshq_appnote_123_cv32e40x-p368        ERROR         -        -       -     -  320.1s
+yosyshq_appnote_123_cv32e40x-p472        ERROR         -        -       -     -  329.9s
+yosyshq_appnote_123_cv32e40x-p524        ERROR         -        -       -     -  302.4s
+yosyshq_appnote_123_cv32e40x-p530        ERROR         -        -       -     -  318.1s
+yosyshq_appnote_123_cv32e40x-p567        ERROR         -        -       -     -  148.5s
+yosyshq_appnote_123_cv32e40x-p568        ERROR         -        -       -     -  144.9s
+yosyshq_appnote_123_cv32e40x-p581        ERROR         -        -       -     -  148.6s
+yosyshq_appnote_123_cv32e40x-p585        ERROR         -        -       -     -  151.7s
+yosyshq_appnote_123_cv32e40x-p608        ERROR         -        -       -     -  141.1s
+yosyshq_appnote_123_cv32e40x-p664        ERROR         -        -       -     -  152.1s
+yosyshq_appnote_123_cv32e40x-p667        ERROR         -        -       -     -  182.8s
+yosyshq_appnote_123_cv32e40x-p697        ERROR         -        -       -     -  147.2s
+yosyshq_appnote_123_cv32e40x-p724        ERROR         -        -       -     -  163.1s
+yosyshq_appnote_123_cv32e40x-p743        ERROR         -        -       -     -  328.7s
+yosyshq_appnote_123_cv32e40x-p767        TIMEOUT       -        -       -     - 1895.2s
+yosyshq_appnote_123_cv32e40x-p88         TIMEOUT       -        -       -     - 1868.7s
+yosyshq_appnote_123_veer-p22             ERROR         -        -       -     - 1055.2s
+yosyshq_appnote_123_veer-p7              ERROR         -        -       -     - 1783.5s
+yosyshq_appnote_123_veer_axi-p62         TIMEOUT       -        -       -     - 1861.6s
+yosyshq_appnote_123_veer_axi-p71         TIMEOUT       -        -       -     - 1861.7s
+yosyshq_appnote_123_veer_axi-p73         TIMEOUT       -        -       -     - 1861.7s
+zipcpu-zipmmu-p15                        TRUE         26       25       5     N 1337.6s
+zipcpu-zipmmu-p44                        TRUE          0        0       2     Y 1425.9s
+
+======================================================================
+END OF AGGREGATE ANALYSIS
+======================================================================

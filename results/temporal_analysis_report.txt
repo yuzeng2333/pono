@@ -1,0 +1,26 @@
+======================================================================
+AGGREGATE TEMPORAL PATTERN ANALYSIS
+======================================================================
+
+Benchmarks analyzed: 148
+Total predicate atoms: 2828
+Successfully evaluated: 2466
+Could not evaluate: 185
+Correlated pairs: 251
+Triggered pairs: 21
+
+--- Pattern Distribution ---
+  always_false                    2388 ( 96.8%)
+  always_true                       48 (  1.9%)
+  monotonic_rise                    14 (  0.6%)
+  monotonic_fall                     9 (  0.4%)
+  eventually_stable                  7 (  0.3%)
+
+--- IC3 Guidance Usefulness ---
+  Invariant:     2436
+  Convergent:    23
+  Stable:        7
+  Phase-based:   0
+  Periodic:      0
+  State-like:    0
+  Dynamic:       0

@@ -73,6 +73,7 @@ enum optionIndex
   IC3IA_PREDICATES,
   IC3IA_SKIP_INIT_PREDS,
   DUMP_BLOCKING_CLAUSES,
+  INCREMENTAL_DUMP,
   SIMULATE_STEPS,
   SIMULATE_OUTPUT,
   NO_IC3SA_FUNC_REFINE,
@@ -433,6 +434,13 @@ const option::Descriptor usage[] = {
     Arg::NonEmpty,
     "  --dump-blocking-clauses <path> \tDump IC3 blocking clauses to JSON file "
     "after proof." },
+  { INCREMENTAL_DUMP,
+    0,
+    "",
+    "incremental-dump",
+    Arg::None,
+    "  --incremental-dump \tDump blocking clauses to disk after each IC3 step "
+    "(use with --dump-blocking-clauses). Slower but survives force-kill." },
   { SIMULATE_STEPS,
     0,
     "",
@@ -986,6 +994,7 @@ ProverResult PonoOptions::parse_and_set_options(int argc,
         case IC3IA_PREDICATES: ic3ia_predicate_file_ = opt.arg; break;
         case IC3IA_SKIP_INIT_PREDS: ic3ia_skip_init_preds_ = true; break;
         case DUMP_BLOCKING_CLAUSES: dump_blocking_clauses_ = opt.arg; break;
+        case INCREMENTAL_DUMP: incremental_dump_ = true; break;
         case SIMULATE_STEPS: simulate_steps_ = std::stoul(opt.arg); break;
         case SIMULATE_OUTPUT: simulate_output_ = opt.arg; break;
         case NO_IC3SA_FUNC_REFINE: ic3sa_func_refine_ = false; break;

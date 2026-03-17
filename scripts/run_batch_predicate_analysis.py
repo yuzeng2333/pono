@@ -8,7 +8,7 @@ and produces aggregate statistics across all benchmarks.
 Usage:
   python3 scripts/run_batch_predicate_analysis.py [options]
   python3 scripts/run_batch_predicate_analysis.py --timeout 600 --engine ic3ia
-  python3 scripts/run_batch_predicate_analysis.py --benchmarks samples/int_win.btor2 samples/uv_example.btor2
+  python3 scripts/run_batch_predicate_analysis.py -j 16 --timeout 1800 --resume
 """
 
 import argparse
@@ -19,6 +19,7 @@ import subprocess
 import sys
 import time
 from collections import defaultdict, Counter
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
 
@@ -89,6 +90,7 @@ def run_pono_ic3(pono_bin, benchmark, output_json, engine="ic3ia", bound=500, ti
         "-e", engine,
         "-k", str(bound),
         "--dump-blocking-clauses", output_json,
+        "--incremental-dump",
     ]
     if sim_steps > 0 and sim_output:
         cmd += ["--simulate", str(sim_steps), "--simulate-output", sim_output]
@@ -107,7 +109,7 @@ def run_pono_ic3(pono_bin, benchmark, output_json, engine="ic3ia", bound=500, ti
             # Send SIGTERM first to let pono dump partial blocking clauses
             proc.send_signal(signal.SIGTERM)
             try:
-                stdout, stderr = proc.communicate(timeout=10)
+                stdout, stderr = proc.communicate(timeout=60)
             except subprocess.TimeoutExpired:
                 proc.kill()
                 stdout, stderr = proc.communicate()
@@ -230,6 +232,95 @@ def analyze_single(clause_json_path):
         "avg_atom_frame_span": sum(atom_frame_spans) / len(atom_frame_spans) if atom_frame_spans else 0,
         "all_atoms": all_atoms,
     }
+
+
+# ============================================================
+# Process a single benchmark (used by both sequential and parallel)
+# ============================================================
+
+def process_one_benchmark(args_tuple):
+    """Process a single benchmark. Designed to be called from ProcessPoolExecutor.
+    
+    args_tuple: (idx, total, bm, bm_name, pono_bin, engine, bound, timeout,
+                 sim_steps, clause_json, sim_json, wf_json, waveform_script, resume)
+    Returns: entry dict with results
+    """
+    (idx, total, bm, bm_name, pono_bin, engine, bound, timeout,
+     sim_steps, clause_json, sim_json, wf_json, waveform_script, resume) = args_tuple
+
+    # Resume: skip if all output files already exist
+    if resume and os.path.isfile(clause_json) and os.path.isfile(wf_json):
+        entry = {
+            "benchmark_path": bm,
+            "benchmark_name": bm_name,
+            "result": "CACHED",
+            "elapsed": 0,
+            "error": None,
+            "status_line": f"[{idx}/{total}] {bm_name} ... SKIPPED (resume)",
+        }
+        stats = analyze_single(clause_json)
+        if stats:
+            entry["stats"] = stats
+            entry["clause_json"] = clause_json
+        if os.path.isfile(wf_json):
+            try:
+                with open(wf_json) as f:
+                    wf_data = json.load(f)
+                entry["waveform"] = wf_data.get("pattern_summary", {})
+                entry["waveform_json"] = wf_json
+            except Exception:
+                pass
+        return entry
+
+    # Run pono
+    result, elapsed, err = run_pono_ic3(
+        pono_bin, bm, clause_json,
+        engine=engine, bound=bound, timeout=timeout,
+        sim_steps=sim_steps, sim_output=sim_json
+    )
+
+    entry = {
+        "benchmark_path": bm,
+        "benchmark_name": bm_name,
+        "result": result,
+        "elapsed": elapsed,
+        "error": err,
+    }
+
+    status_parts = []
+
+    # Analyze if we got blocking clauses
+    if os.path.isfile(clause_json):
+        stats = analyze_single(clause_json)
+        if stats:
+            entry["stats"] = stats
+            entry["clause_json"] = clause_json
+            status_parts.append(f"{result} ({elapsed:.1f}s) atoms={stats['num_atoms']} clauses={stats['num_clauses']}")
+        else:
+            status_parts.append(f"{result} ({elapsed:.1f}s) [no valid clauses]")
+    else:
+        status_parts.append(f"{result} ({elapsed:.1f}s) [no dump]")
+
+    # Run waveform analysis if both clauses and simulation exist
+    if os.path.isfile(clause_json) and os.path.isfile(sim_json):
+        try:
+            subprocess.run(
+                [sys.executable, waveform_script, clause_json, sim_json, wf_json],
+                capture_output=True, text=True, timeout=60
+            )
+            if os.path.isfile(wf_json):
+                with open(wf_json) as f:
+                    wf_data = json.load(f)
+                entry["waveform"] = wf_data.get("pattern_summary", {})
+                entry["waveform_json"] = wf_json
+                patterns = wf_data.get("pattern_summary", {})
+                pat_str = ", ".join(f"{k}={v}" for k, v in patterns.items())
+                status_parts.append(f"waveform: {pat_str}")
+        except Exception as e:
+            status_parts.append(f"waveform error: {e}")
+
+    entry["status_line"] = f"[{idx}/{total}] {bm_name} ... " + " | ".join(status_parts)
+    return entry
 
 
 # ============================================================
@@ -446,6 +537,8 @@ def main():
                         help="BMC bound / IC3 frame limit (default: 500)")
     parser.add_argument("--timeout", type=int, default=600,
                         help="Timeout per benchmark in seconds (default: 600)")
+    parser.add_argument("-j", "--jobs", type=int, default=1,
+                        help="Number of parallel jobs (default: 1)")
     parser.add_argument("--output-dir", default=None,
                         help="Output directory for results (default: <pono-dir>/results)")
     parser.add_argument("--benchmarks", nargs="*", default=None,
@@ -493,95 +586,67 @@ def main():
         benchmarks = benchmarks[:args.max_benchmarks]
 
     sim_steps = args.sim_steps
+    jobs = max(1, args.jobs)
 
     print(f"Found {len(benchmarks)} benchmarks")
-    print(f"Engine: {args.engine}, Bound: {args.bound}, Timeout: {args.timeout}s")
+    print(f"Engine: {args.engine}, Bound: {args.bound}, Timeout: {args.timeout}s, Jobs: {jobs}")
     print(f"Simulation: {sim_steps} cycles per benchmark")
     print(f"Output directory: {output_dir}")
-    print()
+    print(flush=True)
 
-    # Process each benchmark
-    all_results = []
+    # Build task argument tuples
+    tasks = []
     for i, bm in enumerate(benchmarks):
         bm_name = os.path.splitext(os.path.basename(bm))[0]
         clause_json = os.path.join(clauses_dir, f"{bm_name}_clauses.json")
         sim_json = os.path.join(sim_dir, f"{bm_name}_sim.json")
         wf_json = os.path.join(waveform_dir, f"{bm_name}_waveform.json")
 
-        # Resume: skip if all output files already exist
-        if args.resume and os.path.isfile(clause_json) and os.path.isfile(wf_json):
-            print(f"[{i+1}/{len(benchmarks)}] {bm_name} ... SKIPPED (resume)", flush=True)
-            # Re-load cached results
-            entry = {
-                "benchmark_path": bm,
-                "benchmark_name": bm_name,
-                "result": "CACHED",
-                "elapsed": 0,
-                "error": None,
-            }
-            stats = analyze_single(clause_json)
-            if stats:
-                entry["stats"] = stats
-                entry["clause_json"] = clause_json
-            if os.path.isfile(wf_json):
-                try:
-                    with open(wf_json) as f:
-                        wf_data = json.load(f)
-                    entry["waveform"] = wf_data.get("pattern_summary", {})
-                    entry["waveform_json"] = wf_json
-                except Exception:
-                    pass
+        tasks.append((
+            i + 1, len(benchmarks), bm, bm_name, pono_bin,
+            args.engine, args.bound, args.timeout,
+            sim_steps, clause_json, sim_json, wf_json,
+            waveform_script, args.resume
+        ))
+
+    # Process benchmarks
+    all_results = []
+    completed = 0
+
+    if jobs == 1:
+        # Sequential mode (original behavior, immediate output)
+        for task in tasks:
+            entry = process_one_benchmark(task)
+            print(entry.get("status_line", ""), flush=True)
             all_results.append(entry)
-            continue
+    else:
+        # Parallel mode
+        print(f"Running {len(tasks)} benchmarks with {jobs} parallel workers...\n", flush=True)
+        with ProcessPoolExecutor(max_workers=jobs) as executor:
+            future_to_idx = {}
+            for task in tasks:
+                fut = executor.submit(process_one_benchmark, task)
+                future_to_idx[fut] = task[0]  # idx
 
-        print(f"[{i+1}/{len(benchmarks)}] {bm_name} ... ", end="", flush=True)
+            for future in as_completed(future_to_idx):
+                completed += 1
+                try:
+                    entry = future.result()
+                    all_results.append(entry)
+                    print(f"({completed}/{len(tasks)}) {entry.get('status_line', '')}", flush=True)
+                except Exception as e:
+                    idx = future_to_idx[future]
+                    print(f"({completed}/{len(tasks)}) [task {idx}] EXCEPTION: {e}", flush=True)
+                    all_results.append({
+                        "benchmark_path": "",
+                        "benchmark_name": f"task_{idx}",
+                        "result": "ERROR",
+                        "elapsed": 0,
+                        "error": str(e),
+                    })
 
-        result, elapsed, err = run_pono_ic3(
-            pono_bin, bm, clause_json,
-            engine=args.engine, bound=args.bound, timeout=args.timeout,
-            sim_steps=sim_steps, sim_output=sim_json
-        )
-
-        entry = {
-            "benchmark_path": bm,
-            "benchmark_name": bm_name,
-            "result": result,
-            "elapsed": elapsed,
-            "error": err,
-        }
-
-        # Analyze if we got blocking clauses
-        if os.path.isfile(clause_json):
-            stats = analyze_single(clause_json)
-            if stats:
-                entry["stats"] = stats
-                entry["clause_json"] = clause_json
-                print(f"{result} ({elapsed:.1f}s) atoms={stats['num_atoms']} clauses={stats['num_clauses']}", end="")
-            else:
-                print(f"{result} ({elapsed:.1f}s) [no valid clauses]", end="")
-        else:
-            print(f"{result} ({elapsed:.1f}s) [no dump]", end="")
-
-        # Run waveform analysis if both clauses and simulation exist
-        if os.path.isfile(clause_json) and os.path.isfile(sim_json):
-            try:
-                proc = subprocess.run(
-                    [sys.executable, waveform_script, clause_json, sim_json, wf_json],
-                    capture_output=True, text=True, timeout=60
-                )
-                if os.path.isfile(wf_json):
-                    with open(wf_json) as f:
-                        wf_data = json.load(f)
-                    entry["waveform"] = wf_data.get("pattern_summary", {})
-                    entry["waveform_json"] = wf_json
-                    patterns = wf_data.get("pattern_summary", {})
-                    pat_str = ", ".join(f"{k}={v}" for k, v in patterns.items())
-                    print(f" | waveform: {pat_str}", end="")
-            except Exception as e:
-                print(f" | waveform error: {e}", end="")
-
-        print()  # newline
-        all_results.append(entry)
+    # Sort results by original benchmark order
+    all_results.sort(key=lambda r: r.get("benchmark_name", ""))
 
     # Aggregate
     print("\n" + "=" * 70)

@@ -270,6 +270,7 @@ class PonoOptions
   std::string ic3ia_predicate_file_;  ///< JSON file with initial predicates for IC3IA
   bool ic3ia_skip_init_preds_;  ///< skip automatic predicate extraction from init/prop
   std::string dump_blocking_clauses_;  ///< dump IC3 blocking clauses to JSON
+  bool incremental_dump_ = false;      ///< dump frames to disk after each IC3 step
   unsigned long simulate_steps_;  ///< number of steps for SAT-based simulation (0=disabled)
   std::string simulate_output_;  ///< output JSON file for simulation trace
   bool ic3sa_func_refine_;  ///< try functional unrolling in refinement

@@ -41,9 +41,20 @@ deps
 __pycache__
 .cache
 
+# Bulk result files (keep only aggregates)
+results/blocking_clauses/
+results/simulation/
+results/waveform_analysis/
+results/analysis/
+results/batch_run*.log
+results/temporal_batch_output.log
+
 # Generated files
 .gdb_history
 compile_commands.json
+
+# Internal design docs
+LLM_PREDICATE_INTEGRATION_PROMPT.md
 
 # IDE settings
 .vscode

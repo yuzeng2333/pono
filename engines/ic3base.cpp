@@ -178,14 +178,29 @@ ProverResult IC3Base::check_until(int k)
   RefineResult ref_res;
   int i = reached_k_ + 1;
   assert(reached_k_ + 1 >= 0);
+
+  // Write initial (possibly empty) dump so the file always exists
+  if (!incremental_dump_file_.empty()) {
+    dump_frames_to_json(incremental_dump_file_, incremental_dump_engine_);
+  }
+
   while (i <= k) {
     // Check for graceful termination request (e.g., SIGTERM from timeout)
     if (g_terminate_requested) {
       logger.log(0, "IC3Base: termination requested at frame {}, exiting gracefully", i);
+      // Incremental dump before returning
+      if (!incremental_dump_file_.empty()) {
+        dump_frames_to_json(incremental_dump_file_, incremental_dump_engine_);
+      }
       return ProverResult::UNKNOWN;
     }
 
     res = step(i);
+
+    // Incremental dump after each step (survives force-kill)
+    if (!incremental_dump_file_.empty() && i % 1 == 0) {
+      dump_frames_to_json(incremental_dump_file_, incremental_dump_engine_);
+    }
 
     if (res == ProverResult::FALSE) {
       assert(cex_.size());
@@ -1161,6 +1176,13 @@ smt::Term IC3Base::smart_not(const Term & t) const
   } else {
     return solver_->make_term(Not, t);
   }
+}
+
+void IC3Base::set_incremental_dump(const string & filename,
+                                   const string & engine_name)
+{
+  incremental_dump_file_ = filename;
+  incremental_dump_engine_ = engine_name;
 }
 
 // JSON helper: escape a string for JSON output
