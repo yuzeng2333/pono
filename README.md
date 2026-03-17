@@ -16,14 +16,14 @@ IC3IA is a powerful model checking algorithm that operates at the **predicate ab
 
 ```
 ┌─────────────┐     ┌──────────────────┐     ┌─────────────────┐
-│  RTL Design  │────▶│  LLM Predicate   │────▶│  Pono IC3IA     │
-│  (Verilog/   │     │  Generator       │     │  with seeded    │
-│   BTOR2)     │     │                  │     │  predicates     │
+│  RTL Design │────▶│  LLM Predicate   │────▶│  Pono IC3IA     │
+│  (Verilog/  │     │  Generator       │     │  with seeded    │
+│   BTOR2)    │     │                  │     │  predicates     │
 └─────────────┘     └──────────────────┘     └────────┬────────┘
-                      Outputs JSON:                    │
-                      - eq, ult, ule                   ▼
-                      - state variable               SAFE / UNSAFE
-                        relationships                (0 refinements)
+                      Outputs JSON:                   │
+                      - eq, ult, ule                  ▼
+                      - state variable           SAFE / UNSAFE
+                        relationships            (0 refinements)
 ```
 
 ## What Was Modified
